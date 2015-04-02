@@ -13,7 +13,7 @@
 """
 import json, requests
 
-from prodiguer_client.utils import exceptions
+from prodiguer_client import exceptions
 
 
 
@@ -47,6 +47,6 @@ def invoke(endpoint, verb=requests.get, payload=None):
 
     # Raise errors.
     if 'error' in response:
-        raise exceptions.ProdiguerClientException(response['error'])
+        raise exceptions.WebServiceException(endpoint, response)
 
     return response
