@@ -3,7 +3,7 @@
 """
 .. module:: prodiguer_client.__init__.py
 
-   :copyright: @2013 IPSL (http://esdocumentation.org)
+   :copyright: @2015 IPSL (http://ipsl.fr)
    :license: GPL / CeCILL
    :platform: Unix
    :synopsis: Prodiguer client root package intializer.
