@@ -21,7 +21,7 @@ def get_endpoint(route):
     """Returns an API endpoint for invocation.
 
     """
-    base_url = options.get_option(options.OPT_API_URL)
+    base_url = options.get_option(options.OPT_WEB_API_URL)
 
     return r"{0}{1}".format(base_url, route)
 

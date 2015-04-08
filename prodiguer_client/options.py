@@ -18,12 +18,12 @@ from prodiguer_client.utils import runtime as rt
 
 
 # Supported options.
-OPT_API_URL = "api-url"
+OPT_WEB_API_URL = "web-api-url"
 
 
 # Map of supported options and their default values.
 _OPTIONS = {
-    OPT_API_URL : os.environ.get('PRODIGUER_CLIENT_WEB_URL', r"http://localhost:8888")
+    OPT_WEB_API_URL : os.getenv('PRODIGUER_CLIENT_WEB_URL', r"http://localhost:8888")
 }
 
 
