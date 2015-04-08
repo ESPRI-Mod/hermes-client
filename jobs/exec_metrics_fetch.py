@@ -19,8 +19,6 @@ import prodiguer_client as prodiguer
 # Define command line options.
 define("group",
        help="ID of a metrics group")
-define("encoding",
-       help="Encoding to which metrics will be converted")
 define("filter",
        default=None,
        help="Path to a metrics filter to be applied")

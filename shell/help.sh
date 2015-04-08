@@ -10,7 +10,6 @@ log_help_commands()
 	local typeof=$1
 	shift
 	local cmds=$@
-	log "prodiguer-"$typeof" commands:"
 	for cmd in $cmds
 	do
 		"help_"$typeof"_"$cmd
