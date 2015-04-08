@@ -9,8 +9,10 @@ declare -a initializers=(
 	'init_helpers'
 	'init_paths'
 	'exec_metrics'
+	'exec_ops'
 	'help'
 	'help_metrics'
+	'help_ops'
 )
 for initializer in "${initializers[@]}"
 do

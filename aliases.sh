@@ -1,6 +1,7 @@
 # Supported command types.
 declare -a command_types=(
 	metrics
+	ops
 )
 
 # Supported commands.
@@ -16,6 +17,8 @@ declare -a commands=(
 	metrics-format
 	metrics-rename
 	metrics-set-hashes
+	ops-heartbeat
+	ops-list-endpoints
 )
 
 # Set path to exec.sh.

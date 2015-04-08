@@ -65,14 +65,6 @@ def _log(action, msg=None):
     rt.log(msg, module="METRIC")
 
 
-def _log_error(action, error):
-    """Error logger helper function.
-
-    """
-    msg = "{0} :: !!! ERROR !!! {1}".format(action, error)
-    rt.log(msg, module="METRIC")
-
-
 def _get_metric_block(columns, values):
     """Returns a metric block hydrated from a set of columns
     and a list of values.

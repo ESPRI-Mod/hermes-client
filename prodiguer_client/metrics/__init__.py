@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
 """
-.. module:: prodiguer_client.__init__.py
+.. module:: prodiguer_client.metrics.__init__.py
 
    :copyright: @2015 IPSL (http://ipsl.fr)
    :license: GPL / CeCILL
    :platform: Unix
-   :synopsis: Prodiguer client root package intializer.
+   :synopsis: Prodiguer client metrics sub-package intializer.
 
 .. moduleauthor:: IPSL (ES-DOC) <dev@esdocumentation.org>
 

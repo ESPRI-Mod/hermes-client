@@ -12,6 +12,7 @@
 
 """
 from prodiguer_client import metrics
+from prodiguer_client import ops
 from prodiguer_client.utils.runtime import log
 from prodiguer_client.options import (
 	OPT_WEB_API_URL,
