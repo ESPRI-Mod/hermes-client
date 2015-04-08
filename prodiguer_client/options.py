@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 """
-.. module:: TODO - write module name
-   :copyright: Copyright "Sep 4, 2013", Earth System Documentation
+.. module:: prodiguer_client.options.py
+   :copyright: @2015 IPSL (http://ipsl.fr)
    :license: GPL/CeCIL
    :platform: Unix, Windows
-   :synopsis: TODO - write synopsis
+   :synopsis: Manages user assignable library options.
 
 .. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
 
@@ -17,14 +17,14 @@ from prodiguer_client.utils import runtime as rt
 
 
 
-# Supported options.
+# OPTION: URL to web api.
 OPT_WEB_API_URL = "web-api-url"
-
 
 # Map of supported options and their default values.
 _OPTIONS = {
     OPT_WEB_API_URL : os.getenv('PRODIGUER_CLIENT_WEB_URL', r"http://localhost:8888")
 }
+
 
 
 def _validate_option_name(name):

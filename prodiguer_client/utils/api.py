@@ -2,7 +2,7 @@
 
 """
 .. module:: prodiguer_client/utils/api.py
-   :copyright: Copyright "Feb 7, 2013", Earth System Documentation
+   :copyright: @2015 IPSL (http://ipsl.fr)
    :license: GPL/CeCIL
    :platform: Unix, Windows
    :synopsis: API utility functions.
@@ -37,7 +37,7 @@ def invoke(endpoint, verb=requests.get, payload=None):
         data = json.dumps(payload)
 
     # Invoke API.
-    response = verb(endpoint, data=data, headers=headers).json()
+    response = verb(endpoint, data=data, headers=headers, verify=False).json()
 
     # Raise errors.
     if 'error' in response:

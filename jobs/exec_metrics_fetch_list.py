@@ -2,7 +2,7 @@
 
 """
 .. module:: prodiguer/ops/jobs/api/metric/run_fetch_list.py
-   :copyright: Copyright "Feb 7, 2013", Earth System Documentation
+   :copyright: @2015 IPSL (http://ipsl.fr)
    :license: GPL/CeCIL
    :platform: Unix, Windows
    :synopsis: Fetches list of all metric groups.
@@ -26,5 +26,4 @@ def _main():
 
 # Main entry point.
 if __name__ == '__main__':
-    options.parse_command_line()
     _main()
