@@ -16,7 +16,7 @@ import hashlib, os
 
 
 # Name of config fiel containing hash fieldset.
-_HASH_FIELDSET_CONFIG_FILENAME = "hash_fieldset.config"
+_HASH_FIELDSET_CONFIG_FILENAME = "hashifier.config"
 
 # Set of fields used to create a metric hash.
 _HASH_FIELDSET = set()
