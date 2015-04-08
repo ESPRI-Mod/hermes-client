@@ -22,18 +22,12 @@ define("group",
 define("filter",
        default=None,
        help="Path to a metrics filter to be applied")
-define("api_url",
-       default=r"http://localhost:8888",
-       help="API base URL.")
-
 
 
 def _main():
     """Main entry point.
 
     """
-    prodiguer.set_option(prodiguer.OPT_API_URL, options.api_url)
-
     data = prodiguer.metrics.fetch_setup(options.group, options.filter)
     for key in data.keys():
         prodiguer.log("{0} :: {1}".format(key, data[key]), module="METRICS")

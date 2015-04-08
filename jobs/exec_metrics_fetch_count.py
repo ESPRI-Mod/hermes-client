@@ -23,17 +23,13 @@ define("group",
 define("filter",
        default=None,
        help="Path to a metrics filter to be applied")
-define("api_url",
-       default=r"http://localhost:8888",
-       help="API base URL.")
+
 
 
 def _main():
     """Main entry point.
 
     """
-    prodiguer.set_option(prodiguer.OPT_API_URL, options.api_url)
-
     count = prodiguer.metrics.fetch_count(options.group, options.filter)
     prodiguer.log("fetch-count :: {}".format(count), module="METRICS")
 

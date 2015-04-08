@@ -19,17 +19,12 @@ import prodiguer_client as prodiguer
 # Define command line options.
 define("group",
        help="ID of a metrics group")
-define("api_url",
-       default=r"http://localhost:8888",
-       help="API base URL.")
 
 
 def _main():
     """Main entry point.
 
     """
-    prodiguer.set_option(prodiguer.OPT_API_URL, options.api_url)
-
     columns = prodiguer.metrics.fetch_columns(options.group)
     for column in sorted(columns):
         prodiguer.log("fetch-columns :: {}".format(column), module="METRICS")

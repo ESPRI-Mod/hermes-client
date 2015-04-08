@@ -11,6 +11,8 @@
 
 
 """
+import os
+
 from prodiguer_client.utils import runtime as rt
 
 
@@ -21,7 +23,7 @@ OPT_API_URL = "api-url"
 
 # Map of supported options and their default values.
 _OPTIONS = {
-    OPT_API_URL : r"https://prodiguer-test-web.ipsl.fr"
+    OPT_API_URL : os.environ.get('PRODIGUER_CLIENT_WEB_URL', r"http://localhost:8888")
 }
 
 

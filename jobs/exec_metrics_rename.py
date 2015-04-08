@@ -23,17 +23,12 @@ define("group",
 define("new_name",
        type=str,
        help="New group name.")
-define("api_url",
-       default=r"http://localhost:8888",
-       help="API base URL.")
 
 
 def _main():
     """Main entry point.
 
     """
-    prodiguer.set_option(prodiguer.OPT_API_URL, options.api_url)
-
     prodiguer.metrics.rename(options.group, options.new_name)
 
 

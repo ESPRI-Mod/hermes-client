@@ -25,9 +25,6 @@ define("filter",
 define("output_dir",
        type=str,
        help="Path to which downloaded metrics files will be written.")
-define("api_url",
-       default=r"http://localhost:8888",
-       help="API base URL.")
 
 
 
@@ -35,8 +32,6 @@ def _main():
     """Main entry point.
 
     """
-    prodiguer.set_option(prodiguer.OPT_API_URL, options.api_url)
-
     filepath = prodiguer.metrics.fetch_file(options.group, options.filter)
     prodiguer.log("fetch-file :: {}".format(filepath), module="METRICS")
 

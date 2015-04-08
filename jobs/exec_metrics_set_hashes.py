@@ -20,17 +20,12 @@ import prodiguer_client as prodiguer
 define("group",
        type=str,
        help="Name of metrics group whose hash identifiers are to be reset (e.g. cmip5-1).")
-define("api_url",
-       default=r"http://localhost:8888",
-       help="API base URL.")
 
 
 def _main():
     """Main entry point.
 
     """
-    prodiguer.set_option(prodiguer.OPT_API_URL, options.api_url)
-
     prodiguer.metrics.set_hashes(options.group)
 
 

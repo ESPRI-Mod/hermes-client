@@ -11,23 +11,14 @@
 
 
 """
-from tornado.options import define, options
-
 import prodiguer_client as prodiguer
 
-
-
-define("api_url",
-       default=r"http://localhost:8888",
-       help="API base URL.")
 
 
 def _main():
     """Main entry point.
 
     """
-    prodiguer.set_option(prodiguer.OPT_API_URL, options.api_url)
-
     groups = prodiguer.metrics.fetch_list()
     for group in groups:
         prodiguer.log("list :: {}".format(group), module="METRICS")
