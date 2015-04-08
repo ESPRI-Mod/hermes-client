@@ -12,6 +12,11 @@
 
 """
 from prodiguer_client import metrics
+from prodiguer_client.utils.runtime import log
+from prodiguer_client.options import (
+	OPT_API_URL,
+	set_option
+	)
 
 
-__version__ = '0.2.0.0'
+__version__ = '0.1.0.0'

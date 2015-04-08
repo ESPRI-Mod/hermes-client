@@ -50,7 +50,7 @@ class _ProcessingContextInfo(object):
         """Object constructor.
 
         """
-        self.group_id = "{0}-{1}-{2}".format(input_format, group_id, output_format)
+        self.group_id = "{0}-{1}-{2}".format(input_format, group_id, output_format).lower()
         self.input_dir = input_dir
         self.input_files = []
         self.input_format = input_format

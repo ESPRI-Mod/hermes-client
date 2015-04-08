@@ -1,0 +1,32 @@
+# Root alias.
+DIR_PRODIGUER="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+alias prodiguer='$DIR_PRODIGUER/shell/exec.sh'
+
+# Metrics API invocation command aliases.
+alias prodiguer-metrics-add='prodiguer metrics-add'
+alias prodiguer-metrics-add-batch='prodiguer metrics-add-batch'
+alias prodiguer-metrics-delete='prodiguer metrics-delete'
+alias prodiguer-metrics-fetch='prodiguer metrics-fetch'
+alias prodiguer-metrics-fetch-columns='prodiguer metrics-fetch-columns'
+alias prodiguer-metrics-fetch-count='prodiguer metrics-fetch-count'
+alias prodiguer-metrics-fetch-file='prodiguer metrics-fetch-file'
+alias prodiguer-metrics-fetch-setup='prodiguer metrics-fetch-setup'
+alias prodiguer-metrics-fetch-list='prodiguer metrics-fetch-list'
+alias prodiguer-metrics-format='prodiguer metrics-format'
+alias prodiguer-metrics-rename='prodiguer metrics-rename'
+alias prodiguer-metrics-set-hashes='prodiguer metrics-set-hashes'
+
+# Metrics API invocation help aliases.
+alias help-prodiguer-metrics='prodiguer help-metrics'
+alias help-prodiguer-metrics-add='prodiguer help-metrics-add'
+alias help-prodiguer-metrics-add-batch='prodiguer help-metrics-add-batch'
+alias help-prodiguer-metrics-delete='prodiguer help-metrics-delete'
+alias help-prodiguer-metrics-fetch='prodiguer help-metrics-fetch'
+alias help-prodiguer-metrics-fetch-columns='prodiguer help-metrics-fetch-columns'
+alias help-prodiguer-metrics-fetch-count='prodiguer help-metrics-fetch-count'
+alias help-prodiguer-metrics-fetch-file='prodiguer help-metrics-fetch-file'
+alias help-prodiguer-metrics-fetch-setup='prodiguer help-metrics-fetch-setup'
+alias help-prodiguer-metrics-fetch-list='prodiguer help-metrics-fetch-list'
+alias help-prodiguer-metrics-format='prodiguer help-metrics-format'
+alias help-prodiguer-metrics-rename='prodiguer help-metrics-rename'
+alias help-prodiguer-metrics-set-hashes='prodiguer help-metrics-set-hashes'

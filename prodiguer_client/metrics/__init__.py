@@ -21,6 +21,7 @@ from prodiguer_client.metrics.api_proxy import (
 	fetch_file,
 	fetch_list,
 	fetch_setup,
-	rename
+	rename,
+	set_hashes
 	)
 from prodiguer_client.metrics.formatter.main import execute as format

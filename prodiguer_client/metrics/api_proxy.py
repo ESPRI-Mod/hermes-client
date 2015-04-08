@@ -11,13 +11,16 @@
 
 
 """
-import collections, json, os, tempfile
+import collections, json, logging, os, tempfile
 
 import requests
 
 from prodiguer_client.utils import api, runtime as rt, io
 
 
+
+# Reduce requests logging to warnings + errors only.
+logging.getLogger("requests").setLevel(logging.WARNING)
 
 # API endpoints.
 _EP_ADD = r"/api/1/metric/add?duplicate_action={0}"
@@ -28,6 +31,7 @@ _EP_FETCH_COUNT = r"/api/1/metric/fetch_count?group={0}"
 _EP_FETCH_LIST = r"/api/1/metric/fetch_list"
 _EP_FETCH_SETUP = r"/api/1/metric/fetch_setup?group={0}"
 _EP_RENAME = r"/api/1/metric/rename?group={0}&new_name={1}"
+_EP_SET_HASHES = r"/api/1/metric/set_hashes?group={0}"
 
 # Actions to take when uploading duplicate metrics.
 _ADD_DUPLICATE_ACTION_SKIP = 'skip'
@@ -148,8 +152,7 @@ def delete(group_id, group_filter_filepath=None):
     api.invoke(endpoint, verb=requests.post, payload=group_filter)
 
     # Inform user.
-    _log("delete", \
-         "Group {0} metrics sucessfully deleted".format(group_id))
+    _log("delete", "Group {0} metrics sucessfully deleted".format(group_id))
 
 
 def fetch(group_id, group_filter_filepath=None):
@@ -308,3 +311,19 @@ def rename(group_id, new_group_id):
     # Inform user.
     _log("rename", \
          "Group {0} sucessfully renamed {1}".format(group_id, new_group_id))
+
+
+def set_hashes(group_id):
+    """Resets hash identifiers over a group of metrics.
+
+    """
+    # Parse params.
+    group_id = _parse_group_id(group_id)
+
+    # Invoke API.
+    endpoint = api.get_endpoint(_EP_SET_HASHES.format(group_id))
+    api.invoke(endpoint, verb=requests.post)
+
+    # Inform user.
+    _log("set_hashes", \
+         "Group {} hashes sucessfully reset".format(group_id))

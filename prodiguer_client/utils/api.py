@@ -13,23 +13,17 @@
 """
 import json, requests
 
-from prodiguer_client import exceptions
+from prodiguer_client import exceptions, options
 
 
 
-# API base endpoints.
-_API = {
-    "dev": r"http://localhost:8888",
-    "test": r"https://prodiguer-test-web.ipsl.fr",
-    "prod": r"https://prodiguer-web.ipsl.fr"
-}
-
-
-def get_endpoint(route, mode='dev'):
+def get_endpoint(route):
     """Returns an API endpoint for invocation.
 
     """
-    return r"{0}{1}".format(_API[mode] , route)
+    base_url = options.get_option(options.OPT_API_URL)
+
+    return r"{0}{1}".format(base_url, route)
 
 
 def invoke(endpoint, verb=requests.get, payload=None):
