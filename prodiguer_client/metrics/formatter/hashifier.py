@@ -46,7 +46,6 @@ def _get_hashid(group_id, data):
     for key in [k for k in sorted(data.keys()) if k in _HASH_FIELDSET]:
         hashid += unicode(key)
         hashid += unicode(data[key])
-
     return unicode(hashlib.md5(hashid).hexdigest())
 
 

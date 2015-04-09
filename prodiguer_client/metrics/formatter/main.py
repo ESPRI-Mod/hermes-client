@@ -50,7 +50,7 @@ class _ProcessingContextInfo(object):
         """Object constructor.
 
         """
-        self.group_id = "{0}-{1}-{2}".format(input_format, group_id, output_format).lower()
+        self.group_id = unicode(group_id).lower()
         self.input_dir = input_dir
         self.input_files = []
         self.input_format = input_format
@@ -71,6 +71,14 @@ class _ProcessingContextInfo(object):
         self.output_chunks = []
         self.output_columns = []
         self.output_data = []
+
+
+    @property
+    def output_fname(self):
+        """Gets filename of current output.
+
+        """
+        return "metrics-{0}-{1}".format(self.output_format, self.output_count)
 
 
 def _log(msg=None):
@@ -169,7 +177,7 @@ def _write_output_chunks(ctx):
             'group': ctx.group_id,
             'columns': ctx.output_columns,
             'metrics': [r.values() for r in output_chunk]
-        }, ctx.output_dir, ctx.output_format, "metrics-{0}-{1}".format(ctx.output_format, ctx.output_count))
+        }, ctx.output_dir, ctx.output_format, ctx.output_fname)
 
 
 def _validate(group_id, input_dir, input_format, output_dir, output_format):

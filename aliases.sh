@@ -7,6 +7,7 @@ declare -a command_types=(
 # Supported commands.
 declare -a commands=(
 	metrics-add
+	metrics-add-batch
 	metrics-delete
 	metrics-fetch
 	metrics-fetch-columns

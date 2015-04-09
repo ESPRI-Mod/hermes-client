@@ -13,26 +13,17 @@
 """
 import glob, os, json
 
-from prodiguer_client.metrics.formatter import constants
-
 
 
 def init_output_dir(output_dir):
     """Initializes output directory into which metrics will be written.
 
     """
-    def _init(target_dir):
-        """Initializes a target dir.
-
-        """
-        if not os.path.exists(target_dir):
-            os.makedirs(target_dir)
-        else:
-            for fpath in glob.glob(os.path.join(target_dir, "*.json")):
-                os.remove(fpath)
-
-    for output_format in constants.OUTPUT_FORMAT_SET:
-        _init(os.path.join(output_dir, output_format))
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    else:
+        for fpath in glob.glob(os.path.join(output_dir, "*.json")):
+            os.remove(fpath)
 
 
 def write(data, output_dir, output_format, output_file_name):
@@ -43,9 +34,8 @@ def write(data, output_dir, output_format, output_file_name):
     :param str output_file: Name of output file.
 
     """
-    fpath = os.path.join(output_dir, output_format)
     fname = "{}.json".format(output_file_name)
-    fpath = os.path.join(fpath, fname)
+    fpath = os.path.join(output_dir, fname)
     with open(fpath, 'w') as f:
         f.write(json.dumps(data, indent=4))
 
