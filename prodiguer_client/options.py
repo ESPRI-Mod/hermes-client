@@ -22,7 +22,7 @@ OPT_WEB_API_URL = "web-api-url"
 
 # Map of supported options and their default values.
 _OPTIONS = {
-    OPT_WEB_API_URL : os.getenv('PRODIGUER_CLIENT_WEB_URL', r"http://localhost:8888")
+    OPT_WEB_API_URL : os.getenv('PRODIGUER_CLIENT_WEB_URL', r"https://prodiguer-test-web.ipsl.fr")
 }
 
 
