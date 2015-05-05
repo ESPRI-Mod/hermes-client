@@ -8,7 +8,7 @@
    :platform: Unix
    :synopsis: Prodiguer client ops sub-package intializer.
 
-.. moduleauthor:: IPSL (ES-DOC) <dev@esdocumentation.org>
+.. moduleauthor:: Insitut Pierre Simon Laplace (IPSL)
 
 """
 from prodiguer_client.ops.api_proxy import heartbeat

@@ -7,7 +7,7 @@
    :platform: Unix, Windows
    :synopsis: Set of library conversion functions.
 
-.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
+.. moduleauthor:: Insitut Pierre Simon Laplace (IPSL)
 
 
 """

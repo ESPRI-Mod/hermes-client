@@ -7,7 +7,7 @@
    :platform: Unix, Windows
    :synopsis: Decodes metrics in 'pcmdi' format.
 
-.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
+.. moduleauthor:: Insitut Pierre Simon Laplace (IPSL)
 
 
 """

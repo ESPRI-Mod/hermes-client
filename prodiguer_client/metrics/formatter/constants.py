@@ -7,7 +7,7 @@
    :platform: Unix, Windows
    :synopsis: Constants used across the package.
 
-.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
+.. moduleauthor:: Insitut Pierre Simon Laplace (IPSL)
 
 
 """

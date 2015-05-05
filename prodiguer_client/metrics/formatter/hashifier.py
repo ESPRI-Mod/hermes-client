@@ -7,7 +7,7 @@
    :platform: Unix, Windows
    :synopsis: Sets metric hashes in order to uniquely identify one metric from another within a group.
 
-.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
+.. moduleauthor:: Insitut Pierre Simon Laplace (IPSL)
 
 
 """

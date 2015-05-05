@@ -6,7 +6,7 @@
    :platform: Unix, Windows
    :synopsis: Simulation metrics formatter.
 
-.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
+.. moduleauthor:: Insitut Pierre Simon Laplace (IPSL)
 
 
 """

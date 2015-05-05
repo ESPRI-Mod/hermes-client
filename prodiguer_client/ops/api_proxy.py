@@ -7,7 +7,7 @@
    :platform: Unix, Windows
    :synopsis: Proxy to the remote ops web-service API.
 
-.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
+.. moduleauthor:: Insitut Pierre Simon Laplace (IPSL)
 
 
 """

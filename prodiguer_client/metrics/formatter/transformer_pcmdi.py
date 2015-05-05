@@ -7,7 +7,7 @@
    :platform: Unix, Windows
    :synopsis: Transforms metrics in pcdmi format to the standard format.
 
-.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
+.. moduleauthor:: Insitut Pierre Simon Laplace (IPSL)
 
 
 """

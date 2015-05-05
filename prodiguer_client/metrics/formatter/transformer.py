@@ -7,7 +7,7 @@
    :platform: Unix, Windows
    :synopsis: Transformer metrics from one format to standardized format.
 
-.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
+.. moduleauthor:: Insitut Pierre Simon Laplace (IPSL)
 
 
 """

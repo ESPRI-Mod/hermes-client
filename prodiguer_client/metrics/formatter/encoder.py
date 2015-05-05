@@ -7,7 +7,7 @@
    :platform: Unix, Windows
    :synopsis: Encodes metrics prior to being written to file system.
 
-.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
+.. moduleauthor:: Insitut Pierre Simon Laplace (IPSL)
 
 
 """

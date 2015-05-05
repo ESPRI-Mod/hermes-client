@@ -8,7 +8,7 @@
    :platform: Unix
    :synopsis: Prodiguer client root package intializer.
 
-.. moduleauthor:: IPSL (ES-DOC) <dev@esdocumentation.org>
+.. moduleauthor:: Insitut Pierre Simon Laplace (IPSL)
 
 """
 

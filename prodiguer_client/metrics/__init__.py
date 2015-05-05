@@ -8,7 +8,7 @@
    :platform: Unix
    :synopsis: Prodiguer client metrics sub-package intializer.
 
-.. moduleauthor:: IPSL (ES-DOC) <dev@esdocumentation.org>
+.. moduleauthor:: Insitut Pierre Simon Laplace (IPSL)
 
 """
 from prodiguer_client.metrics.api_proxy import add

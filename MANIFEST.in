@@ -2,4 +2,5 @@ recursive-include *.py *.sh
 include README.rst
 include LICENSE
 include requirements.txt
+include aliases.sh
 include runtests.sh
