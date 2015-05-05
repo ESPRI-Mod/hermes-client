@@ -12,6 +12,8 @@
 
 """
 import os
+import re
+from codecs import open
 
 from setuptools import setup
 from setuptools import find_packages
@@ -33,9 +35,18 @@ def read(*paths):
         return file_.read()
 
 
+def get_version():
+    """Returns library version by inspecting __init__.py file.
+
+    """
+    with open('prodiguer_client/__init__.py', 'r') as fd:
+        return re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]',
+                         fd.read(), re.MULTILINE).group(1)
+
+
 setup(
     name='prodiguer_client',
-    version='0.1.0',
+    version=get_version(),
     description='prodiguer-client is a python client library for interacting with prodiguer web services.',
     long_description=(read('README.rst')),
     install_requires=_REQUIRES,
@@ -43,7 +54,7 @@ setup(
     license='CeCILL',
     author='Mark Anthony Greenslade',
     author_email='momipsl@ipsl.fr',
-    packages=find_packages(exclude=['jobs*', 'shell*']),
+    packages=find_packages(),
     include_package_data=True,
     classifiers=[
         'Development Status :: 4 - Beta',

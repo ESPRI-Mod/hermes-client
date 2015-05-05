@@ -11,7 +11,7 @@ declare DIR_SHELL=$DIR
 declare DIR_ROOT="$(dirname "$DIR")"
 
 # Path to CLI jobs.
-declare DIR_JOBS=$DIR_ROOT/jobs
+declare DIR_JOBS=$DIR_SHELL/jobs
 
 # Extend python path.
 export PYTHONPATH=$PYTHONPATH:$DIR_ROOT
