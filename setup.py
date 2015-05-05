@@ -49,7 +49,7 @@ setup(
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'Natural Language :: English',
-        'License :: GPL / CeCILL',
+        'License :: OSI Approved :: GPL / CeCILL',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
