@@ -35,15 +35,12 @@ def _validate_option_name(name):
         rt.throw("prodiguer-client option {0} is unsupported".format(name))
 
 
-def get_supported():
+def list_options():
     """Returns tuple of supported library options.
 
     """
-    opts = []
     for name, value in _OPTIONS.items():
-        opts.append((name, value))
-
-    return tuple(opts)
+        print("OPTION {0} = {1}".format(name, value))
 
 
 def set_option(name, value):
