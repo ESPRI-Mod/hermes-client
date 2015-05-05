@@ -1,66 +1,59 @@
-#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
+"""
+.. module:: setup.py
+
+   :copyright: @2015 IPSL (http://ipsl.fr)
+   :license: GPL / CeCILL
+   :platform: Unix
+   :synopsis: Prodiguer client setup.
+
+.. moduleauthor:: IPSL (ES-DOC) <dev@esdocumentation.org>
+
+"""
 import os
-import re
-import sys
 
-from codecs import open
+from setuptools import setup
+from setuptools import find_packages
 
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
 
-if sys.argv[-1] == 'publish':
-    os.system('python setup.py sdist upload')
-    sys.exit()
 
-packages = [
-    'prodiguer_client',
-    'prodiguer_client.metrics',
-    'prodiguer_client.metrics.formatter',
-    'prodiguer_client.ops',
-    'prodiguer_client.utils'
-]
-
-requires = [
+# List of 3rd party python dependencies.
+_REQUIRES = [
     'arrow',
     'requests'
 ]
 
-version = ''
-with open('prodiguer_client/__init__.py', 'r') as fd:
-    version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]',
-                        fd.read(), re.MULTILINE).group(1)
 
-if not version:
-    raise RuntimeError('Cannot find version information')
+def read(*paths):
+    """Build a file path from *paths* and return the contents.
 
-with open('README.rst', 'r', 'utf-8') as f:
-    readme = f.read()
+    """
+    with open(os.path.join(*paths), 'r') as file_:
+        return file_.read()
+
 
 setup(
     name='prodiguer_client',
-    version=version,
-    description='Prodiguer web sercies client side library.',
-    long_description=readme,
+    version='0.1.0',
+    description='prodiguer-client is a python client library for interacting with prodiguer web services.',
+    long_description=(read('README.rst')),
+    install_requires=_REQUIRES,
+    url='https://github.com/Prodiguer/prodiguer-client',
+    license='CeCILL',
     author='Mark Anthony Greenslade',
-    author_email='momipsl@ipsl.jussieu.fr',
-    url='http://es-doc.org',
-    packages=packages,
-    package_data={'': ['LICENSE', 'NOTICE']},
-    package_dir={'prodiguer_client': 'prodiguer_client'},
+    author_email='momipsl@ipsl.fr',
+    packages=find_packages(exclude=['jobs*', 'shell*']),
     include_package_data=True,
-    install_requires=requires,
-    license='GPL / CeCILL',
-    zip_safe=False,
-    classifiers=(
-        'Development Status :: 3 - Alpha',
+    classifiers=[
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
-        'Natural Language :: French',
-        'License :: OSI Approved :: CeCILL',
+        'Natural Language :: English',
+        'License :: GPL / CeCILL',
+        'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7'
-    ),
-    extras_require={},
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+    ],
 )
