@@ -49,6 +49,7 @@ setup(
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'Natural Language :: English',
+        'License :: OSI Approved :: GNU General Public License (GPL)',
         'License :: OSI Approved :: CEA CNRS Inria Logiciel Libre License, version 2.1 (CeCILL-2.1)',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
