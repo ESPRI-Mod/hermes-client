@@ -16,3 +16,4 @@ pyessv.egg-info/
 env/
 dist
 venv
+prodiguer_client.egg-info
