@@ -11,7 +11,13 @@
 .. moduleauthor:: IPSL (ES-DOC) <dev@esdocumentation.org>
 
 """
-__version__ = '0.1.0.0'
+
+__title__ = 'prodiguer_client'
+__version__ = '0.1.0'
+__author__ = 'Mark Anthony Greenslade'
+__license__ = 'GPL / CeCILL'
+__copyright__ = 'Copyright 2015 IPSL'
+
 
 from prodiguer_client import metrics
 from prodiguer_client import ops
@@ -19,4 +25,3 @@ from prodiguer_client.utils.runtime import log
 from prodiguer_client.options import list_options
 from prodiguer_client.options import OPT_WEB_API_URL
 from prodiguer_client.options import set_option
-
