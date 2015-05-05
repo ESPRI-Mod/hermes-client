@@ -11,7 +11,5 @@
 .. moduleauthor:: IPSL (ES-DOC) <dev@esdocumentation.org>
 
 """
-from prodiguer_client.ops.api_proxy import (
-	heartbeat,
-	list_endpoints
-	)
+from prodiguer_client.ops.api_proxy import heartbeat
+from prodiguer_client.ops.api_proxy import list_endpoints

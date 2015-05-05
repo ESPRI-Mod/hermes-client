@@ -12,14 +12,11 @@
 
 """
 import collections
-import csv
 import datetime
 import json
 import re
 import types
 import uuid
-
-from dateutil import parser as date_parser
 
 
 
@@ -409,42 +406,6 @@ def dict_keys_to_underscore_case(d):
     """
     return dict_keys(d, str_to_underscore_case)
 
-
-def str_to_typed_value(s, type):
-    """Converts a string to a typed value.
-
-    :param str s: A string for type conversion.
-    :param class type: Target type.
-
-    :returns: A string converted to a typed value.
-    :rtype: object
-
-    """
-    # Encode.
-    if s is not None:
-        s = s.encode('utf-8') if isinstance(s, unicode) else str(s)
-
-    # None if empty value.
-    if s is None or not len(s):
-        return None
-
-    # Decode according to type:
-    # ... date's
-    if type in (datetime.datetime, datetime.date, datetime.time):
-        return date_parser.parse(s)
-    # ... uuid's
-    elif type is uuid.UUID:
-        return uuid.UUID(s)
-    # ... boolean's
-    elif type is bool:
-        return s.lower() in ("yes", "true", "t", "1", "y")
-    # ... others
-    else:
-        try:
-            return type(s)
-        # ... exceptions
-        except Error as e:
-            print "Scalar decoding error", s, type
 
 
 # Set of types to be ignored when jsonifying.

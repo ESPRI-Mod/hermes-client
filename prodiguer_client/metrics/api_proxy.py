@@ -11,11 +11,17 @@
 
 
 """
-import collections, json, logging, os, tempfile
+import collections
+import json
+import logging
+import os
+import tempfile
 
 import requests
 
-from prodiguer_client.utils import api, runtime as rt, io
+from prodiguer_client.utils import api
+from prodiguer_client.utils import runtime as rt
+from prodiguer_client.utils import io
 
 
 

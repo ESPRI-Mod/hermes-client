@@ -11,13 +11,11 @@
 .. moduleauthor:: IPSL (ES-DOC) <dev@esdocumentation.org>
 
 """
+__version__ = '0.1.0.0'
+
 from prodiguer_client import metrics
 from prodiguer_client import ops
 from prodiguer_client.utils.runtime import log
-from prodiguer_client.options import (
-	OPT_WEB_API_URL,
-	set_option
-	)
+from prodiguer_client.options import OPT_WEB_API_URL
+from prodiguer_client.options import set_option
 
-
-__version__ = '0.1.0.0'
