@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-.. module:: prodiguer_client.options.py
+.. module:: prodiguer_client.options
    :copyright: @2015 IPSL (http://ipsl.fr)
    :license: GPL/CeCIL
    :platform: Unix, Windows
@@ -13,19 +13,24 @@
 """
 import os
 
+from prodiguer_client import exceptions
 from prodiguer_client.utils import logger
-from prodiguer_client.utils import runtime as rt
 
 
 
 # OPTION: URL to web api.
 OPT_WEB_API_URL = "web-api-url"
 
+# Name of web api url environment variable.
+_WEB_API_URL_ENV_VAR = 'PRODIGUER_CLIENT_WEB_URL'
+
+# Default web api url environment variable.
+_WEB_API_URL_DEFAULT = r"https://prodiguer-test-web.ipsl.fr"
+
 # Map of supported options and their default values.
 _OPTIONS = {
-    OPT_WEB_API_URL : os.getenv('PRODIGUER_CLIENT_WEB_URL', r"https://prodiguer-test-web.ipsl.fr")
+    OPT_WEB_API_URL : os.getenv(_WEB_API_URL_ENV_VAR, _WEB_API_URL_DEFAULT)
 }
-
 
 
 def _validate_option_name(name):
@@ -33,7 +38,7 @@ def _validate_option_name(name):
 
     """
     if name not in _OPTIONS:
-        rt.throw("prodiguer-client option {0} is unsupported".format(name))
+        raise exceptions.InvalidOptionError(name)
 
 
 def list_options():

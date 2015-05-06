@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 """
-.. module:: prodiguer_client/utils/api.py
+.. module:: io.py
    :copyright: @2015 IPSL (http://ipsl.fr)
    :license: GPL/CeCIL
    :platform: Unix, Windows
-   :synopsis: IO utility functions.
+   :synopsis: Library IO utility functions.
 
 .. moduleauthor:: Insitut Pierre Simon Laplace (IPSL)
 

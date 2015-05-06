@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-.. module:: prodiguer_client.exceptions.py
+.. module:: prodiguer_client.exceptions
    :copyright: @2015 IPSL (http://ipsl.fr)
    :license: GPL/CeCIL
    :platform: Unix, Windows
@@ -20,18 +20,29 @@ class ProdiguerClientException(Exception):
 
     """
     def __init__(self, msg):
-        """Object constructor.
+        """Instance constructor.
 
         """
         self.message = unicode(msg)
         self.timestamp = unicode(arrow.get())
 
-
     def __str__(self):
-        """Returns a string representation.
+        """Instance string representation.
 
         """
-        return "IPSL PRODIGUER EXCEPTION : {0}".format(repr(self.message))
+        return "IPSL PRODIGUER CLIENT EXCEPTION : {0}".format(repr(self.message))
+
+
+class InvalidOptionError(ProdiguerClientException):
+    """An error raised when user tries to access an invalid option.
+
+    """
+    def __init__(self, option):
+        """Instance constructor.
+
+        """
+        msg = "Unsupported option: {}".format(option)
+        super(InvalidOptionError, self).__init__(msg)
 
 
 class WebServiceException(ProdiguerClientException):
@@ -39,7 +50,7 @@ class WebServiceException(ProdiguerClientException):
 
     """
     def __init__(self, endpoint, response):
-        """Object constructor.
+        """Instance constructor.
 
         """
         super(WebServiceException, self).__init__(response['error'])
@@ -47,9 +58,8 @@ class WebServiceException(ProdiguerClientException):
         self.endpoint = endpoint
         self.error_type = response['errorType']
 
-
     def __str__(self):
-        """Returns a string representation.
+        """Instance string representation.
 
         """
         text = """
@@ -60,11 +70,9 @@ class WebServiceException(ProdiguerClientException):
         \tError Type = {3}
         """
 
-        text = text.format(
+        return text.format(
             self.timestamp,
             self.endpoint,
             self.message,
             self.error_type
             )
-
-        return text

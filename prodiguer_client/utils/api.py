@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 """
-.. module:: prodiguer_client/utils/api.py
+.. module:: api.py
    :copyright: @2015 IPSL (http://ipsl.fr)
    :license: GPL/CeCIL
    :platform: Unix, Windows
-   :synopsis: API utility functions.
+   :synopsis: Libary prodiguer web-service API utility functions.
 
 .. moduleauthor:: Insitut Pierre Simon Laplace (IPSL)
 
@@ -13,7 +13,8 @@
 """
 import json, requests
 
-from prodiguer_client import exceptions, options
+from prodiguer_client import exceptions
+from prodiguer_client import options
 
 
 
