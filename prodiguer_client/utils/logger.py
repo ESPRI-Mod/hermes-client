@@ -42,7 +42,7 @@ def _get_formatted_message(msg, module, level, app, institute):
         return _NULL_MSG
     else:
         return "{0} :: {1} {2} {3} {4} > {5}".format(
-            unicode(arrow.get()[0:-13]),
+            unicode(arrow.get())[0:-13],
             institute,
             app,
             level,

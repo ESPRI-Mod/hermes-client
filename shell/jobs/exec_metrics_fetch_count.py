@@ -11,8 +11,8 @@
 
 
 """
-from tornado.options import define, options
-
+from tornado.options import define
+from tornado.options import options
 import prodiguer_client as prodiguer
 
 
