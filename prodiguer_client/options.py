@@ -21,6 +21,9 @@ from prodiguer_client.utils import logger
 # OPTION: URL to web api.
 OPT_WEB_API_URL = "web-api-url"
 
+# OPTION: logging is verbose.
+OPT_IS_VERBOSE = "verbose"
+
 # Name of web api url environment variable.
 _WEB_API_URL_ENV_VAR = 'PRODIGUER_CLIENT_WEB_URL'
 
@@ -29,7 +32,8 @@ _WEB_API_URL_DEFAULT = r"https://prodiguer-test-web.ipsl.fr"
 
 # Map of supported options and their default values.
 _OPTIONS = {
-    OPT_WEB_API_URL : os.getenv(_WEB_API_URL_ENV_VAR, _WEB_API_URL_DEFAULT)
+    OPT_WEB_API_URL : os.getenv(_WEB_API_URL_ENV_VAR, _WEB_API_URL_DEFAULT),
+    OPT_IS_VERBOSE: True
 }
 
 
