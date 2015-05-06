@@ -14,7 +14,7 @@
 import logging
 
 from prodiguer_client.utils import api
-from prodiguer_client.utils import runtime as rt
+from prodiguer_client.utils import logger
 
 
 
@@ -35,7 +35,7 @@ def _log(action, msg=None):
         msg = action
     else:
         msg = "{0} :: {1}".format(action.upper(), msg)
-    rt.log(msg, module="OPS")
+    logger.log(msg, module="OPS")
 
 
 def heartbeat():

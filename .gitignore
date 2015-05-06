@@ -9,11 +9,10 @@ violations.pyflakes.txt
 cover/
 build/
 docs/_build
-pyessv.egg-info/
 *.pyc
 *.swp
 *.egg
 env/
 dist
 venv
-prodiguer_client.egg-info
+prodiguer_client.egg-info/

@@ -20,7 +20,7 @@ import tempfile
 import requests
 
 from prodiguer_client.utils import api
-from prodiguer_client.utils import runtime as rt
+from prodiguer_client.utils import logger
 from prodiguer_client.utils import io
 
 
@@ -68,7 +68,7 @@ def _log(action, msg=None):
         msg = action
     else:
         msg = "{0} :: {1}".format(action.upper(), msg)
-    rt.log(msg, module="METRIC")
+    logger.log(msg, module="METRIC")
 
 
 def _get_metric_block(columns, values):
