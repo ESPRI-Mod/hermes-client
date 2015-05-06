@@ -1,4 +1,6 @@
-recursive-include *.py *.sh *.rst *.txt
-include shell/*
-include jobs/*
+recursive-include shell *.py *.sh
+include aliases.sh
 include LICENSE
+include README.rst
+include requirements.txt
+include runtests.sh

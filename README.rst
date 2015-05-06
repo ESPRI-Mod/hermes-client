@@ -27,5 +27,4 @@ What are the contents of prodiguer-client ?
 
 prodiguer_client		Python library.
 shell			        Bash scripts.
-jobs			        Python scripts.
 

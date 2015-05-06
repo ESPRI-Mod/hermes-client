@@ -13,7 +13,7 @@
 """
 
 __title__ = 'prodiguer_client'
-__version__ = '0.1.2'
+__version__ = '0.1.0.2'
 __author__ = 'Mark Anthony Greenslade'
 __license__ = 'GPL / CeCILL'
 __copyright__ = 'Copyright 2015 IPSL'
