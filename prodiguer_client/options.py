@@ -14,7 +14,6 @@
 import os
 
 from prodiguer_client import exceptions
-from prodiguer_client.utils import logger
 
 
 
@@ -62,7 +61,6 @@ def set_option(name, value):
     """
     _validate_option_name(name)
     _OPTIONS[name] = unicode(value)
-    logger.log("OPTION: {0} = {1}.".format(name, value))
 
 
 def get_option(name):
