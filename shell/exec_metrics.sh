@@ -33,7 +33,7 @@ exec_metrics_delete()
 # Fetch metric group.
 exec_metrics_fetch()
 {
-	python $DIR_JOBS/exec_metrics_fetch.py --group=$1 --filter=$2 --encoding=json
+	python $DIR_JOBS/exec_metrics_fetch.py --group=$1 --filter=$2
 }
 
 # Fetch metric group columns.
@@ -51,7 +51,7 @@ exec_metrics_fetch_count()
 # Fetch metric group to file system.
 exec_metrics_fetch_file()
 {
-	python $DIR_JOBS/exec_metrics_fetch_file.py --group=$1 --output_dir=$2
+	python $DIR_JOBS/exec_metrics_fetch_file.py --group=$1 --output_dir=$2 --filter=$3
 }
 
 # List groups.

@@ -11,6 +11,9 @@
 
 
 """
+import os
+import shutil
+
 from tornado.options import define
 from tornado.options import options
 import prodiguer_client as prodiguer
@@ -33,8 +36,11 @@ def _main():
     """Main entry point.
 
     """
-    filepath = prodiguer.metrics.fetch_file(options.group, options.filter)
-    prodiguer.log("fetch-file :: {}".format(filepath), module="METRICS")
+    input_file = prodiguer.metrics.fetch_file(options.group, options.filter)
+    output_file = "{}.json".format(os.path.join(options.output_dir, options.group))
+    shutil.move(input_file, output_file)
+    prodiguer.log("fetch-file :: {}".format(output_file, module="METRICS"))
+
 
 
 # Main entry point.
