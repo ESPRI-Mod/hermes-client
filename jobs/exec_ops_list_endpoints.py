@@ -11,8 +11,14 @@
 
 
 """
+import argparse
+
 import prodiguer_client as prodiguer
 
+
+
+# Define command line arguments.
+_parser = argparse.ArgumentParser("List set of endpoints supported by remote API.")
 
 
 def _main():
@@ -26,4 +32,5 @@ def _main():
 
 # Main entry point.
 if __name__ == '__main__':
+    _parser.parse_args()
     _main()

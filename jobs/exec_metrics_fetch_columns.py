@@ -11,27 +11,32 @@
 
 
 """
-from tornado.options import define
-from tornado.options import options
+import argparse
+
 import prodiguer_client as prodiguer
 
 
 
-# Define command line options.
-define("group",
-       help="ID of a metrics group")
+# Define command line arguments.
+_parser = argparse.ArgumentParser("Fetches columns associated with a set of metrics.")
+_parser.add_argument(
+    "-g", "--group",
+    help="ID of a metrics group",
+    dest="group",
+    type=str
+    )
 
 
-def _main():
+
+def _main(args):
     """Main entry point.
 
     """
-    columns = prodiguer.metrics.fetch_columns(options.group)
+    columns = prodiguer.metrics.fetch_columns(args.group)
     for column in sorted(columns):
         prodiguer.log("fetch-columns :: {}".format(column), module="METRICS")
 
 
 # Main entry point.
 if __name__ == '__main__':
-    options.parse_command_line()
-    _main()
+    _main(_parser.parse_args())

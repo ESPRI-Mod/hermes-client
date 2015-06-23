@@ -11,30 +11,39 @@
 
 
 """
-from tornado.options import define
-from tornado.options import options
+import argparse
+
+
 import prodiguer_client as prodiguer
 
 
 
-# Define command line options.
-define("group",
-       help="ID of a metrics group")
-define("filter",
-       default=None,
-       help="Path to a metrics filter to be applied")
+# Define command line arguments.
+_parser = argparse.ArgumentParser("Fetches count of metrics within a set of metrics.")
+_parser.add_argument(
+    "-g", "--group",
+    help="ID of a metrics group",
+    dest="group",
+    type=str
+    )
+_parser.add_argument(
+    "-f", "--filter",
+    help="Path to a metrics filter to be applied",
+    dest="filter",
+    type=str,
+    default=None
+    )
 
 
 
-def _main():
+def _main(args):
     """Main entry point.
 
     """
-    count = prodiguer.metrics.fetch_count(options.group, options.filter)
+    count = prodiguer.metrics.fetch_count(args.group, args.filter)
     prodiguer.log("fetch-count :: {}".format(count), module="METRICS")
 
 
 # Main entry point.
 if __name__ == '__main__':
-    options.parse_command_line()
-    _main()
+    _main(_parser.parse_args())

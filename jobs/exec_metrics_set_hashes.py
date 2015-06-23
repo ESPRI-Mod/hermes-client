@@ -11,26 +11,29 @@
 
 
 """
-from tornado.options import define
-from tornado.options import options
+import argparse
+
 import prodiguer_client as prodiguer
 
 
 
-# Define command line options.
-define("group",
-       type=str,
-       help="Name of metrics group whose hash identifiers are to be reset (e.g. cmip5-1).")
+# Define command line arguments.
+_parser = argparse.ArgumentParser("Reassigns hash identifiers for a group of metrics.")
+_parser.add_argument(
+    "-g", "--group",
+    help="ID of a metrics group whose hash identifiers are to be reset",
+    dest="group",
+    type=str
+    )
 
 
-def _main():
+def _main(args):
     """Main entry point.
 
     """
-    prodiguer.metrics.set_hashes(options.group)
+    prodiguer.metrics.set_hashes(args.group)
 
 
 # Main entry point.
 if __name__ == '__main__':
-    options.parse_command_line()
-    _main()
+    _main(_parser.parse_args())

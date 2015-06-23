@@ -1,11 +1,8 @@
-# Supported command types.
-declare -a command_types=(
-	metrics
-	ops
-)
+# Set path to ./jobs.
+_DIR_JOBS="$( dirname "${BASH_SOURCE[0]}" )"/jobs
 
 # Supported commands.
-declare -a commands=(
+declare -a _commands=(
 	metrics-add
 	metrics-add-batch
 	metrics-delete
@@ -22,30 +19,15 @@ declare -a commands=(
 	ops-list-endpoints
 )
 
-# Set path to exec.sh.
-PRODIGUER_SHELL_EXEC="$( dirname "${BASH_SOURCE[0]}" )"/shell/exec.sh
-
 # Create command aliases.
-for command in "${commands[@]}"
+for _command in "${_commands[@]}"
 do
-	alias prodiguer-client-$command=$PRODIGUER_SHELL_EXEC" "$command
-done
-
-# Create command type help aliases.
-for command_type in "${command_types[@]}"
-do
-	alias help-prodiguer-client-$command_type=$PRODIGUER_SHELL_EXEC" help-"$command_type
-done
-
-# Create command help aliases.
-for command in "${commands[@]}"
-do
-	alias help-prodiguer-client-$command=$PRODIGUER_SHELL_EXEC" help-"$command
+	declare _job=`echo $_command | tr '[:upper:]' '[:lower:]' | tr '-' '_'`
+	alias prodiguer-client-$_command='python '$_DIR_JOBS'/exec_'$_job'.py'
 done
 
 # Unset work vars.
-unset PRODIGUER_SHELL_EXEC
-unset command_type
-unset command_types
-unset command
-unset commands
+unset _DIR_JOBS
+unset _command
+unset _commands
+unset _job

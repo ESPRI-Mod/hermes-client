@@ -11,7 +11,9 @@
 
 
 """
-import json, requests
+import json
+
+import requests
 
 from prodiguer_client import exceptions
 from prodiguer_client import options
@@ -38,7 +40,15 @@ def invoke(endpoint, verb=requests.get, payload=None):
         data = json.dumps(payload)
 
     # Invoke API.
-    response = verb(endpoint, data=data, headers=headers, verify=False).json()
+    response = verb(endpoint, data=data, headers=headers, verify=False)
+    if response.status_code != 200:
+        raise exceptions.WebServiceException(endpoint, {
+            'error': response.reason,
+            'errorType': response.status_code
+            })
+
+    # Decode API response.
+    response = response.json()
 
     # Raise errors.
     if 'error' in response:
