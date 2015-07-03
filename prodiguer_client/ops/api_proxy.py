@@ -23,7 +23,6 @@ logging.getLogger("requests").setLevel(logging.WARNING)
 
 # API endpoints.
 _EP_HEARTBEAT = r"/api/1/ops/heartbeat"
-_EP_LIST_ENDPOINTS = r"/api/1/ops/list_endpoints"
 
 
 
@@ -52,15 +51,3 @@ def heartbeat():
     _log("heartbeat", \
          "Remote API is up and running")
 
-
-def list_endpoints():
-    """Tests to see if remote API is up.
-
-    :raises prodiguer_client.exceptions.WebServiceException: If the web-service reports an error.
-
-    """
-    # Invoke API.
-    endpoint = api.get_endpoint(_EP_LIST_ENDPOINTS)
-    response = api.invoke(endpoint)
-
-    return set(response['endpoints'])

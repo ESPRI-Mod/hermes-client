@@ -29,15 +29,15 @@ from prodiguer_client.utils import io
 logging.getLogger("requests").setLevel(logging.WARNING)
 
 # API endpoints.
-_EP_ADD = r"/api/1/metric/add?duplicate_action={0}"
-_EP_DELETE = r"/api/1/metric/delete?group={0}"
-_EP_FETCH_GROUP = r"/api/1/metric/fetch?group={0}"
-_EP_FETCH_COLUMNS = r"/api/1/metric/fetch_columns?group={0}"
-_EP_FETCH_COUNT = r"/api/1/metric/fetch_count?group={0}"
-_EP_FETCH_LIST = r"/api/1/metric/fetch_list"
-_EP_FETCH_SETUP = r"/api/1/metric/fetch_setup?group={0}"
-_EP_RENAME = r"/api/1/metric/rename?group={0}&new_name={1}"
-_EP_SET_HASHES = r"/api/1/metric/set_hashes?group={0}"
+_EP_ADD = r"/api/1/simulation/metrics/add?duplicate_action={0}"
+_EP_DELETE = r"/api/1/simulation/metrics/delete?group={0}"
+_EP_FETCH_GROUP = r"/api/1/simulation/metrics/fetch?group={0}"
+_EP_FETCH_COLUMNS = r"/api/1/simulation/metrics/fetch_columns?group={0}"
+_EP_FETCH_COUNT = r"/api/1/simulation/metrics/fetch_count?group={0}"
+_EP_FETCH_LIST = r"/api/1/simulation/metrics/fetch_list"
+_EP_FETCH_SETUP = r"/api/1/simulation/metrics/fetch_setup?group={0}"
+_EP_RENAME = r"/api/1/simulation/metrics/rename?group={0}&new_name={1}"
+_EP_SET_HASHES = r"/api/1/simulation/metrics/set_hashes?group={0}"
 
 # Actions to take when uploading duplicate metrics.
 _ADD_DUPLICATE_ACTION_SKIP = 'skip'

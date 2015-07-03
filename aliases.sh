@@ -16,7 +16,6 @@ declare -a _commands=(
 	metrics-rename
 	metrics-set-hashes
 	ops-heartbeat
-	ops-list-endpoints
 )
 
 # Create command aliases.

@@ -12,4 +12,3 @@
 
 """
 from prodiguer_client.ops.api_proxy import heartbeat
-from prodiguer_client.ops.api_proxy import list_endpoints
