@@ -11,14 +11,14 @@ Step 1: Install python dependencies
 
 The prodiguer client library requires the following python libraries both of which can be installed via pip::
 
-pip install arrow
-pip install requests
+	pip install arrow
+	pip install requests
 
 Step 2: Clone from GitHub::
 ----------------------------
 
-cd YOUR_WORKING_DIRECTORY
-git clone https://github.com/Prodiguer/prodiguer-client.git
+	cd YOUR_WORKING_DIRECTORY
+	git clone https://github.com/Prodiguer/prodiguer-client.git
 
 Step 3: Setup environment
 ----------------------------
