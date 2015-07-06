@@ -9,14 +9,14 @@ Installing the prodiguer client library is simple & straightforward.
 Step 1: Install python dependencies
 ----------------------------
 
-The prodiguer client library requires the following python libraries both of which can be installed via pip::
+The prodiguer client library requires the following python libraries all of which can be installed via pip::
 
 	pip install arrow
 	pip install requests
 
-Step 2: Clone from GitHub::
+Step 2: Clone from GitHub
 ----------------------------
-
+::
 	cd YOUR_WORKING_DIRECTORY
 	git clone https://github.com/Prodiguer/prodiguer-client.git
 
