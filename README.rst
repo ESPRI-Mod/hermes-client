@@ -7,13 +7,12 @@ Client side prodiguer python library.
 What is prodiguer-client ?
 --------------------------------------
 
-prodiguer-client is a python client library for interacting with prodiguer web services.  It supports pcmdi-metrics management.
+prodiguer-client is a python library that simplifies interacting with prodiguer web services.  It supports the management of pcmdi simulation metrics.
 
-
-Why prodiguer-client ?
+Documentation
 --------------------------------------
 
-To simplify & streamline interaction with prodiguer web services.
+[Installation](<https://github.com/Prodiguer/prodiguer-client/blob/master/docs/usage.rst>) | [Usage](<https://github.com/Prodiguer/prodiguer-client/blob/master/docs/usage.rst>)
 
 
 Who uses prodiguer-client ?
@@ -25,6 +24,6 @@ IPSL researchers & engineers.
 What are the contents of prodiguer-client ?
 --------------------------------------
 
-prodiguer_client		Python library.
-shell			        Bash scripts.
-
+docs					Documentation
+jobs					Jobs run from command line
+prodiguer_client		Python library
