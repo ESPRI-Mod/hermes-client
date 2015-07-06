@@ -2,7 +2,7 @@
 Command Line Interface
 ======================
 
-Upon successful installation of the prodiguer client library, simulation metrics management commands can be called from command line.  For each command listed below type -h or --help to access the command's help text.
+Upon successful .. _installation: http://www.python.org of the prodiguer client library, simulation metrics management commands can be called from command line.  For each command listed below type -h or --help to access the command's help text.
 
 
 prodiguer-client-metrics-add
