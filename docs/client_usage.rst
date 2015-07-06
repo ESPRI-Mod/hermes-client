@@ -10,13 +10,9 @@ prodiguer-client-metrics-add
 
 Uploads simulation metrics to remote repository.
 
-**-f, --file**
+**-f, --file**  Path to a metrics file to be uploaded to server
 
-Path to a metrics file to be uploaded to server
-
-**--duplicate-action**
-
-Action to take when adding a metric with a duplicate hash identifier.  Default = skip.
+**--duplicate-action**  Action to take when adding a metric with a duplicate hash identifier.  Default = skip.
 
 prodiguer-client-metrics-add-batch
 ----------------------------
