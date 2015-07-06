@@ -7,6 +7,36 @@ By installing & configuring the prodiguer client library, simulation metric func
 
 prodiguer-client-metrics-add
 ----------------------------
-&nbsp;&nbsp;&nbsp;&nbsp;adds a group of metrics from a json file, if the group does not exist then it is created prior to adding the metrics    
-&nbsp;&nbsp;&nbsp;&nbsp;FILEPATH: path to a metrics file  
 
+prodiguer-client-metrics-add-batch
+----------------------------
+
+prodiguer-client-metrics-delete
+----------------------------
+
+prodiguer-client-metrics-fetch
+----------------------------
+
+prodiguer-client-metrics-fetch-columns
+----------------------------
+
+prodiguer-client-metrics-fetch-count
+----------------------------
+
+prodiguer-client-metrics-fetch-file
+----------------------------
+
+prodiguer-client-metrics-fetch-setup
+----------------------------
+
+prodiguer-client-metrics-fetch-list
+----------------------------
+
+prodiguer-client-metrics-format
+----------------------------
+
+prodiguer-client-metrics-rename
+----------------------------
+
+prodiguer-client-metrics-set-hashes
+----------------------------
