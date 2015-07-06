@@ -12,13 +12,6 @@ Documentation
 - `Installation <https://github.com/Prodiguer/prodiguer-client/blob/master/docs/usage.rst>`_
 - `Usage <https://github.com/Prodiguer/prodiguer-client/blob/master/docs/usage.rst>`_
 
-What are the contents of prodiguer-client ?
---------------------------------------
-
-- docs					Documentation
-- jobs					Jobs run from command line
-- prodiguer_client		Python library
-
 Supported Platforms
 --------------------------------------
 

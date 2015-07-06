@@ -1,4 +1,5 @@
-recursive-include shell *.py *.sh
+recursive-include jobs *.py
+recursive-include prodiguer_client *.py
 include aliases.sh
 include LICENSE
 include README.rst

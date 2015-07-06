@@ -66,7 +66,7 @@ setup(
     author='Mark Anthony Greenslade',
     author_email='momipsl@ipsl.jussieu.fr',
     packages=find_packages(),
-    # package_dir={'prodiguer_client': 'prodiguer_client', 'shell': 'shell'},
+    # package_dir={'prodiguer_client': 'prodiguer_client'},
     include_package_data=True,
     distclass=_BinaryDistribution,
     classifiers=[
