@@ -12,8 +12,8 @@ prodiguer-client is a python library that simplifies interacting with prodiguer 
 Documentation
 --------------------------------------
 
-[Installation](<https://github.com/Prodiguer/prodiguer-client/blob/master/docs/usage.rst>) | [Usage](<https://github.com/Prodiguer/prodiguer-client/blob/master/docs/usage.rst>)
-
+`Installation <https://github.com/Prodiguer/prodiguer-client/blob/master/docs/usage.rst>`_
+ | `Usage <https://github.com/Prodiguer/prodiguer-client/blob/master/docs/usage.rst>`_
 
 Who uses prodiguer-client ?
 --------------------------------------
