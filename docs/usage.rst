@@ -2,7 +2,7 @@
 Using Prodiguer client
 ======================
 
-Upon successful `installation <https://github.com/Prodiguer/prodiguer-client/blob/master/docs/installation.rst>`_ of the prodiguer client library, supported commands can easily be called from command line.  Listed below are the full set of supported commands along descriptions of the supported command arguments.
+Upon successful `installation <https://github.com/Prodiguer/prodiguer-client/blob/master/docs/installation.rst>`_ of the `prodiguer client<https://github.com/Prodiguer/prodiguer-client>`_ library, supported commands can easily be called from command line.  Listed below are the full set of supported commands alongside command argument descriptions.
 
 **Note** - For each command listed below type -h or --help to access the command's help text.
 
