@@ -21,7 +21,7 @@ import prodiguer_client as prodiguer
 _parser = argparse.ArgumentParser("Reassigns hash identifiers for a group of metrics.")
 _parser.add_argument(
     "-g", "--group",
-    help="ID of a metrics group whose hash identifiers are to be reset",
+    help="A metrics group identifier",
     dest="group",
     type=str
     )

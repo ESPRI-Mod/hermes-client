@@ -21,19 +21,19 @@ import prodiguer_client as prodiguer
 _parser = argparse.ArgumentParser("Formats simulation metrics in readiness for upload.")
 _parser.add_argument(
     "-g", "--group",
-    help="ID of a metrics group",
+    help="A metrics group identifier",
     dest="group",
     type=str
     )
 _parser.add_argument(
     "-i", "--input-dir",
-    help="Directory containing unformatted metrics files.",
+    help="Directory containing unformatted metrics files",
     dest="input_dir",
     type=str
     )
 _parser.add_argument(
     "-o", "--output-dir",
-    help="Directory to which reformatted metrics files will be written.",
+    help="Directory to which reformatted metrics files will be written",
     dest="output_dir",
     type=str
     )

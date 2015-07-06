@@ -21,13 +21,13 @@ import prodiguer_client as prodiguer
 _parser = argparse.ArgumentParser("Deletes simulation metrics from remote repository.")
 _parser.add_argument(
     "-g", "--group",
-    help="ID of a metrics group",
+    help="A metrics group identifier",
     dest="group",
     type=str
     )
 _parser.add_argument(
     "-f", "--filter",
-    help="Path to a metrics filter to be applied prior to deletion",
+    help="Path to a metrics filter to be applied",
     dest="filter",
     type=str,
     default=None

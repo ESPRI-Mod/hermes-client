@@ -21,7 +21,7 @@ import prodiguer_client as prodiguer
 _parser = argparse.ArgumentParser("Fetches simulation metrics from remote repository.")
 _parser.add_argument(
     "-g", "--group",
-    help="ID of a metrics group",
+    help="A metrics group identifier",
     dest="group",
     type=str
     )

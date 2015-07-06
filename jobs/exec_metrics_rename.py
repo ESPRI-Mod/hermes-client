@@ -21,13 +21,13 @@ import prodiguer_client as prodiguer
 _parser = argparse.ArgumentParser("Renames a group of metrics.")
 _parser.add_argument(
     "-g", "--group",
-    help="ID of a metrics group to be renamed",
+    help="A metrics group identifier",
     dest="group",
     type=str
     )
 _parser.add_argument(
     "-n", "--new-name",
-    help="New group name.",
+    help="New metrics group identifier",
     dest="new_name",
     type=str
     )

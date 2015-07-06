@@ -23,7 +23,7 @@ import prodiguer_client as prodiguer
 _parser = argparse.ArgumentParser("Fetches a set of metrics and saves them to local file system.")
 _parser.add_argument(
     "-g", "--group",
-    help="ID of a metrics group",
+    help="A metrics group identifier",
     dest="group",
     type=str
     )
@@ -36,7 +36,7 @@ _parser.add_argument(
     )
 _parser.add_argument(
     "-o", "--output-dir",
-    help="Directory to which downloaded metrics files will be written.",
+    help="Directory to which downloaded metrics files will be written",
     dest="output_dir",
     type=str
     )
