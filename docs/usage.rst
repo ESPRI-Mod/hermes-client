@@ -2,7 +2,7 @@
 Using Prodiguer client
 ======================
 
-Upon successful `installation <http://www.supervisord.org>`_ of the prodiguer client library, simulation metrics management commands can be called from command line.  For each command listed below type -h or --help to access the command's help text.
+Upon successful `installation installation.rst>`_ of the prodiguer client library, simulation metrics management commands can be called from command line.  For each command listed below type -h or --help to access the command's help text.
 
 prodiguer-client-metrics-add
 ----------------------------
