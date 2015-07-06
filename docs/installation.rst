@@ -16,7 +16,9 @@ The prodiguer client library requires the following python libraries all of whic
 
 Step 2: Clone from GitHub
 ----------------------------
-::
+
+Simply clone from GitHub into your working directory::
+
 	cd YOUR_WORKING_DIRECTORY
 	git clone https://github.com/Prodiguer/prodiguer-client.git
 
