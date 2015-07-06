@@ -32,7 +32,7 @@ Uploads a batch of simulation metrics to remote repository.
 
 	Action to take when adding a metric with a duplicate hash identifier.  Default = skip.
 
-	**skip** = the duplicate metric is not added;
+	**skip** = the duplicate metric is not added;  
 	**force** = the exsiting metric is overwritten.
 
 prodiguer-client-metrics-delete
@@ -64,7 +64,7 @@ Fetches a set of simulation metrics from remote repository.
 prodiguer-client-metrics-fetch-columns
 ----------------------------
 
-Fetches columns associated with a set of metrics from remote repository.
+Fetches columns associated with a set of simulation metrics from remote repository.
 
 **-g, --group**
 
@@ -73,7 +73,7 @@ Fetches columns associated with a set of metrics from remote repository.
 prodiguer-client-metrics-fetch-count
 ----------------------------
 
-Fetches count of metrics associated with a set of metrics from remote repository.
+Fetches count associated with a set of simulation metrics from remote repository.
 
 **-g, --group**
 
@@ -86,7 +86,7 @@ Fetches count of metrics associated with a set of metrics from remote repository
 prodiguer-client-metrics-fetch-file
 ----------------------------
 
-Fetches a set of metrics from remote repository and saves them to local file system.
+Fetches a set of simulation metrics from remote repository and saves them to local file system.
 
 **-g, --group**
 
@@ -103,7 +103,7 @@ Fetches a set of metrics from remote repository and saves them to local file sys
 prodiguer-client-metrics-fetch-setup
 ----------------------------
 
-	Fetches setup data associated with a set of metrics.
+	Fetches setup data associated with a set of simulation metrics.
 
 **-g, --group**
 
@@ -116,7 +116,7 @@ prodiguer-client-metrics-fetch-setup
 prodiguer-client-metrics-fetch-list
 ----------------------------
 
-Fetches list of all metric group names.
+Fetches list of all simulation metric group names.
 
 prodiguer-client-metrics-format
 ----------------------------
@@ -138,7 +138,7 @@ Formats simulation metrics in readiness for upload.
 prodiguer-client-metrics-rename
 ----------------------------
 
-Renames a set of metrics.
+Renames a set of simulation metrics.
 
 **-g, --group**
 
@@ -151,7 +151,7 @@ Renames a set of metrics.
 prodiguer-client-metrics-set-hashes
 ----------------------------
 
-Reassigns hash identifiers for a set of metrics.
+Reassigns hash identifiers for a set of simulation metrics.
 
 **-g, --group**
 
