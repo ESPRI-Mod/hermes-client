@@ -32,8 +32,9 @@ Uploads a batch of simulation metrics to remote repository.
 
 	Action to take when adding a metric with a duplicate hash identifier.  Default = skip.
 
-	**skip** = the duplicate metric is not added;  
-	**force** = the exsiting metric is overwritten.
+	**skip** = duplicate metrics are ignored.
+
+	**force** = existing metrics are overwritten.
 
 prodiguer-client-metrics-delete
 ----------------------------
