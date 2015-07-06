@@ -17,7 +17,11 @@ Uploads simulation metrics to remote repository.
 
 **--duplicate-action**
 
-	Action to take when adding a metric with a duplicate hash identifier.  Default = skip.
+	Action to take when adding a metric with a duplicate hash identifier.  **Default = skip**.
+
+	**skip** = duplicate metrics are ignored.
+
+	**force** = existing metrics are overwritten.
 
 prodiguer-client-metrics-add-batch
 ----------------------------
@@ -30,7 +34,7 @@ Uploads a batch of simulation metrics to remote repository.
 
 **--duplicate-action**
 
-	Action to take when adding a metric with a duplicate hash identifier.  Default = skip.
+	Action to take when adding a metric with a duplicate hash identifier.  **Default = skip**.
 
 	**skip** = duplicate metrics are ignored.
 
