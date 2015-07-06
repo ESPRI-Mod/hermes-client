@@ -4,29 +4,30 @@ Prodiguer Client Installation Guide
 
 Installing the prodiguer client library is simple & straightforward.
 
+**Note** - it is assumed that git and pip are available.
+
 Step 1: Install python dependencies
 ----------------------------
 
-The prodiguer client library requires the following python libraries both of which can be installed via pip:
+The prodiguer client library requires the following python libraries both of which can be installed via pip::
 
-- **arrow**
+pip install arrow
+pip install requests
 
-- **requests**
-
-Step 2: Clone library from GitHub
+Step 2: Clone from GitHub::
 ----------------------------
 
 cd YOUR_WORKING_DIRECTORY
 git clone https://github.com/Prodiguer/prodiguer-client.git
 
-Step 3: Set library environment variables
+Step 3: Setup environment
 ----------------------------
 
 Edit either $HOME/.bash_profile or $HOME/.bash_rc and setup your environment so that the prodiguer client library is correctly initialised::
 
-	export PYTHONPATH=$PYTHONPATH:**YOUR_WORKING_DIRECTORY**/prodiguer-client
+	export PYTHONPATH=$PYTHONPATH:YOUR_WORKING_DIRECTORY/prodiguer-client
 	export PRODIGUER_CLIENT_WEB_URL='https://prodiguer-test-web.ipsl.fr'
-	source **YOUR_WORKING_DIRECTORY**/prodiguer-client/aliases.sh
+	source YOUR_WORKING_DIRECTORY/prodiguer-client/aliases.sh
 
 Step 4.	Command line usage
 ----------------------------
