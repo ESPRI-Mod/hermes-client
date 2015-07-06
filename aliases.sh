@@ -1,5 +1,5 @@
 # Set path to ./jobs.
-_DIR_JOBS="$( dirname "${BASH_SOURCE[0]}" )"/jobs
+declare _DIR_JOBS="$( dirname "${BASH_SOURCE[0]}" )"/jobs
 
 # Supported commands.
 declare -a _commands=(
