@@ -30,7 +30,7 @@ Edit either $HOME/.bash_profile or $HOME/.bash_rc and setup your environment so 
 
 	source **YOUR_WORKING_DIRECTORY**/prodiguer-client/aliases.sh
 
-Step 4.	Start a new terminal session
+Step 4.	Command line usage
 ----------------------------
 
-Verify the prodiguer client commands are available by typing prodiguer-client-[TAB] to see the list of supported commands.  Full usage instructions are documented `here <https://github.com/Prodiguer/prodiguer-client/blob/master/docs/usage.rst>`_.
+Open a new terminal session in order to activate the prodiguer client library.  Verify that  prodiguer client commands are available by typing **prodiguer-client-**[TAB] to see the list of supported commands.  Full usage instructions are documented `here <https://github.com/Prodiguer/prodiguer-client/blob/master/docs/usage.rst>`_.
