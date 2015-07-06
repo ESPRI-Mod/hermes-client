@@ -2,7 +2,7 @@
 Command Line Interface
 ======================
 
-By installing & configuring the prodiguer client library, simulation metric functions can be called from command line.  For each command listed below type -h or --help to access the command's help text.
+Upon successful installation of the prodiguer client library, simulation metrics management commands can be called from command line.  For each command listed below type -h or --help to access the command's help text.
 
 
 prodiguer-client-metrics-add
