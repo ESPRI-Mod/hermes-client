@@ -9,9 +9,9 @@ Step 1: Install python dependencies
 
 The prodiguer client library requires the following python libraries both of which can be installed via pip:
 
-	**arrow**
+- **arrow**
 
-	**requests**
+- **requests**
 
 Step 2: Clone library from GitHub
 ----------------------------
