@@ -25,16 +25,23 @@ Simply clone from GitHub into your working directory::
 Step 3: Setup shell environment
 ----------------------------
 
-Edit either $HOME/.bash_profile or $HOME/.bash_rc and setup your shell environment so that the prodiguer client library is correctly initialised::
+Edit either $HOME/.bash_profile or $HOME/.bash_rc to setup your shell environment so that the prodiguer client library is correctly initialised.  You may cut & paste the following code (remember to define the YOUR_WORKING_DIRECTORY field)::
 
-	# Add prodiguer client to python path.
-	export PYTHONPATH=$PYTHONPATH:YOUR_WORKING_DIRECTORY/prodiguer-client
+	# --------------------------------------------------------------------
+	# Prodiguer client settings
+	# --------------------------------------------------------------------
 
-	# Set prodiguer web-service URL.
+	# Prodiguer: client path
+	export PRODIGUER_CLIENT_HOME=YOUR_WORKING_DIRECTORY/prodiguer-client
+
+	# Prodiguer: web-service URL.
 	export PRODIGUER_CLIENT_WEB_URL='https://prodiguer-test-web.ipsl.fr'
 
-	# Activate prodiguer aliases.
-	source YOUR_WORKING_DIRECTORY/prodiguer-client/aliases.sh
+	# Prodiguer: client aliases
+	source $PRODIGUER_CLIENT_HOME/aliases.sh
+
+	# Prodiguer: client python path
+	export PYTHONPATH=$PYTHONPATH:$PRODIGUER_CLIENT_HOME
 
 Step 4.	Command line usage
 ----------------------------
