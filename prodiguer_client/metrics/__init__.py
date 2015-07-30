@@ -11,6 +11,9 @@
 .. moduleauthor:: Insitut Pierre Simon Laplace (IPSL)
 
 """
+__version__ = '0.4.0.0'
+
+
 from prodiguer_client.metrics.api_proxy import add
 from prodiguer_client.metrics.api_proxy import add_batch
 from prodiguer_client.metrics.api_proxy import delete
