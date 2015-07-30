@@ -1,7 +1,3 @@
-# Extend python path.
-declare _DIR="$( dirname "${BASH_SOURCE[0]}" )"
-export PYTHONPATH=$PYTHONPATH:$_DIR
-
 # Set path to ./jobs.
 declare _DIR_JOBS="$( dirname "${BASH_SOURCE[0]}" )"/jobs
 
