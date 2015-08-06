@@ -2,7 +2,7 @@
 # Run the pyessv test suite.
 #
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-cd $DIR
-export PYTHONPATH=PYTHONPATH:$DIR
+PRODIGUER_CLIENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $PRODIGUER_CLIENT_DIR
+export PYTHONPATH=PYTHONPATH:$PRODIGUER_CLIENT_DIR
 nosetests -v -s tests

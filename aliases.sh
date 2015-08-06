@@ -1,8 +1,8 @@
 # Set path to ./jobs.
-declare _DIR_JOBS="$( dirname "${BASH_SOURCE[0]}" )"/jobs
+declare PRODIGUER_CLIENT_DIR_JOBS="$( dirname "${BASH_SOURCE[0]}" )"/jobs
 
 # Supported commands.
-declare -a _commands=(
+declare -a PRODIGUER_CLIENT_COMMANDS=(
 	metrics-add
 	metrics-add-batch
 	metrics-delete
@@ -19,14 +19,14 @@ declare -a _commands=(
 )
 
 # Create command aliases.
-for _command in "${_commands[@]}"
+for PRODIGUER_CLIENT_COMMAND in "${PRODIGUER_CLIENT_COMMANDS[@]}"
 do
-	declare _job=`echo $_command | tr '[:upper:]' '[:lower:]' | tr '-' '_'`
-	alias prodiguer-client-$_command='python '$_DIR_JOBS'/exec_'$_job'.py'
+	declare PRODIGUER_CLIENT_JOB=`echo $PRODIGUER_CLIENT_COMMAND | tr '[:upper:]' '[:lower:]' | tr '-' '_'`
+	alias prodiguer-client-$PRODIGUER_CLIENT_COMMAND='python '$PRODIGUER_CLIENT_DIR_JOBS'/exec_'$PRODIGUER_CLIENT_JOB'.py'
 done
 
 # Unset work vars.
-unset _DIR_JOBS
-unset _command
-unset _commands
-unset _job
+unset PRODIGUER_CLIENT_DIR_JOBS
+unset PRODIGUER_CLIENT_COMMAND
+unset PRODIGUER_CLIENT_COMMANDS
+unset PRODIGUER_CLIENT_JOB
