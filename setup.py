@@ -63,7 +63,7 @@ setup(
     install_requires=_REQUIRES,
     url='https://github.com/Prodiguer/prodiguer-client',
     license='CeCILL',
-    author='Mark Anthony Greenslade',
+    author='Mark Anthony Conway-Greenslade',
     author_email='momipsl@ipsl.jussieu.fr',
     packages=find_packages(),
     # package_dir={'prodiguer_client': 'prodiguer_client'},

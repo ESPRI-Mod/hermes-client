@@ -14,7 +14,7 @@
 
 __title__ = 'prodiguer_client'
 __version__ = '0.4.0.0'
-__author__ = 'Mark Anthony Greenslade'
+__author__ = 'Mark Anthony Conway-Greenslade'
 __license__ = 'GPL / CeCILL'
 __copyright__ = 'Copyright 2015 IPSL'
 
