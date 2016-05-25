@@ -86,7 +86,7 @@ def _log(msg=None):
     """
     # Format.
     if msg is not None:
-        msg = "IPSL PRODIGUER INFO METRICS > {}".format(str(msg).strip())
+        msg = "IPSL HERMES INFO METRICS > {}".format(str(msg).strip())
     else:
         msg = "-------------------------------------------------------------------------------"
 

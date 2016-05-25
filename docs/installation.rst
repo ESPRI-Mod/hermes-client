@@ -32,16 +32,16 @@ Edit either $HOME/.bash_profile or $HOME/.bash_rc to setup your shell environmen
 	# --------------------------------------------------------------------
 
 	# Prodiguer: client path
-	export PRODIGUER_CLIENT_HOME=YOUR_WORKING_DIRECTORY/prodiguer-client
+	export HERMES_CLIENT_HOME=YOUR_WORKING_DIRECTORY/prodiguer-client
 
 	# Prodiguer: web-service URL.
 	export HERMES_CLIENT_WEB_URL='https://prodiguer-test-web.ipsl.fr'
 
 	# Prodiguer: client aliases
-	source $PRODIGUER_CLIENT_HOME/aliases.sh
+	source $HERMES_CLIENT_HOME/aliases.sh
 
 	# Prodiguer: client python path
-	export PYTHONPATH=$PYTHONPATH:$PRODIGUER_CLIENT_HOME
+	export PYTHONPATH=$PYTHONPATH:$HERMES_CLIENT_HOME
 
 Step 4.	Command line usage
 ----------------------------

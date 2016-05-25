@@ -30,7 +30,7 @@ class ProdiguerClientException(Exception):
         """Instance string representation.
 
         """
-        return "IPSL PRODIGUER CLIENT EXCEPTION : {0}".format(repr(self.message))
+        return "IPSL HERMES CLIENT EXCEPTION : {0}".format(repr(self.message))
 
 
 class InvalidOptionError(ProdiguerClientException):
@@ -63,7 +63,7 @@ class WebServiceException(ProdiguerClientException):
 
         """
         text = """
-        IPSL PRODIGUER WEB SERVICE API EXCEPTION :
+        IPSL HERMES WEB SERVICE API EXCEPTION :
         \tTimestamp = {0}
         \tEndpoint = {1}
         \tError = {2}
