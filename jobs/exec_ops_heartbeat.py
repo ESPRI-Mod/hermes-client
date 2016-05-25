@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-.. module:: prodiguer-client/jobs/exec_ops_heartbeat.py
+.. module:: hermes-client/jobs/exec_ops_heartbeat.py
    :copyright: @2015 IPSL (http://ipsl.fr)
    :license: GPL/CeCIL
    :platform: Unix, Windows
@@ -13,7 +13,7 @@
 """
 import argparse
 
-import prodiguer_client as prodiguer
+import prodiguer_client as hermes
 
 
 
@@ -25,7 +25,7 @@ def _main():
     """Main entry point.
 
     """
-    prodiguer.ops.heartbeat()
+    hermes.ops.heartbeat()
 
 
 # Main entry point.

@@ -27,7 +27,7 @@ OPT_IS_VERBOSE = "verbose"
 _WEB_API_URL_ENV_VAR = 'HERMES_CLIENT_WEB_URL'
 
 # Default web api url environment variable.
-_WEB_API_URL_DEFAULT = r"https://prodiguer-test-web.ipsl.fr"
+_WEB_API_URL_DEFAULT = r"https://hermes-test-web.ipsl.fr"
 
 # Map of supported options and their default values.
 _OPTIONS = {
