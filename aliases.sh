@@ -1,8 +1,8 @@
 # Set path to ./jobs.
-declare PRODIGUER_CLIENT_DIR_JOBS="$( dirname "${BASH_SOURCE[0]}" )"/jobs
+declare HERMES_CLIENT_DIR_JOBS="$( dirname "${BASH_SOURCE[0]}" )"/jobs
 
 # Supported commands.
-declare -a PRODIGUER_CLIENT_COMMANDS=(
+declare -a HERMES_CLIENT_COMMANDS=(
 	metrics-add
 	metrics-add-batch
 	metrics-delete
@@ -19,14 +19,14 @@ declare -a PRODIGUER_CLIENT_COMMANDS=(
 )
 
 # Create command aliases.
-for PRODIGUER_CLIENT_COMMAND in "${PRODIGUER_CLIENT_COMMANDS[@]}"
+for HERMES_CLIENT_COMMAND in "${HERMES_CLIENT_COMMANDS[@]}"
 do
-	declare PRODIGUER_CLIENT_JOB=`echo $PRODIGUER_CLIENT_COMMAND | tr '[:upper:]' '[:lower:]' | tr '-' '_'`
-	alias prodiguer-client-$PRODIGUER_CLIENT_COMMAND='python '$PRODIGUER_CLIENT_DIR_JOBS'/exec_'$PRODIGUER_CLIENT_JOB'.py'
+	declare HERMES_CLIENT_JOB=`echo $HERMES_CLIENT_COMMAND | tr '[:upper:]' '[:lower:]' | tr '-' '_'`
+	alias prodiguer-client-$HERMES_CLIENT_COMMAND='python '$HERMES_CLIENT_DIR_JOBS'/exec_'$HERMES_CLIENT_JOB'.py'
 done
 
 # Unset work vars.
-unset PRODIGUER_CLIENT_DIR_JOBS
-unset PRODIGUER_CLIENT_COMMAND
-unset PRODIGUER_CLIENT_COMMANDS
-unset PRODIGUER_CLIENT_JOB
+unset HERMES_CLIENT_DIR_JOBS
+unset HERMES_CLIENT_COMMAND
+unset HERMES_CLIENT_COMMANDS
+unset HERMES_CLIENT_JOB

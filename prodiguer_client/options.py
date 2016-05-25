@@ -24,7 +24,7 @@ OPT_WEB_API_URL = "web-api-url"
 OPT_IS_VERBOSE = "verbose"
 
 # Name of web api url environment variable.
-_WEB_API_URL_ENV_VAR = 'PRODIGUER_CLIENT_WEB_URL'
+_WEB_API_URL_ENV_VAR = 'HERMES_CLIENT_WEB_URL'
 
 # Default web api url environment variable.
 _WEB_API_URL_DEFAULT = r"https://prodiguer-test-web.ipsl.fr"

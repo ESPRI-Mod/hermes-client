@@ -35,7 +35,7 @@ Edit either $HOME/.bash_profile or $HOME/.bash_rc to setup your shell environmen
 	export PRODIGUER_CLIENT_HOME=YOUR_WORKING_DIRECTORY/prodiguer-client
 
 	# Prodiguer: web-service URL.
-	export PRODIGUER_CLIENT_WEB_URL='https://prodiguer-test-web.ipsl.fr'
+	export HERMES_CLIENT_WEB_URL='https://prodiguer-test-web.ipsl.fr'
 
 	# Prodiguer: client aliases
 	source $PRODIGUER_CLIENT_HOME/aliases.sh
