@@ -15,7 +15,7 @@ import arrow
 
 
 
-class ProdiguerClientException(Exception):
+class HermesClientException(Exception):
     """Default package exception class.
 
     """
@@ -33,7 +33,7 @@ class ProdiguerClientException(Exception):
         return "IPSL HERMES CLIENT EXCEPTION : {0}".format(repr(self.message))
 
 
-class InvalidOptionError(ProdiguerClientException):
+class InvalidOptionError(HermesClientException):
     """An error raised when user tries to access an invalid option.
 
     """
@@ -45,7 +45,7 @@ class InvalidOptionError(ProdiguerClientException):
         super(InvalidOptionError, self).__init__(msg)
 
 
-class WebServiceException(ProdiguerClientException):
+class WebServiceException(HermesClientException):
     """Web service exception class.
 
     """

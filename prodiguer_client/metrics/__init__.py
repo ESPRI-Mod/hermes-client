@@ -6,7 +6,7 @@
    :copyright: @2015 IPSL (http://ipsl.fr)
    :license: GPL / CeCILL
    :platform: Unix
-   :synopsis: Prodiguer client metrics sub-package intializer.
+   :synopsis: Hermes client metrics sub-package intializer.
 
 .. moduleauthor:: Insitut Pierre Simon Laplace (IPSL)
 

@@ -6,7 +6,7 @@
    :copyright: @2015 IPSL (http://ipsl.fr)
    :license: GPL / CeCILL
    :platform: Unix
-   :synopsis: Prodiguer client setup.
+   :synopsis: Hermes client setup.
 
 .. moduleauthor:: IPSL (ES-DOC) <dev@esdocumentation.org>
 
@@ -58,10 +58,10 @@ def _get_version():
 setup(
     name='prodiguer_client',
     version=_get_version(),
-    description='prodiguer-client is a python client library for interacting with prodiguer web services.',
+    description='hermes-client is a python client library for interacting with HERMES web services.',
     long_description=(_read('README.rst')),
     install_requires=_REQUIRES,
-    url='https://github.com/Prodiguer/prodiguer-client',
+    url='https://github.com/Prodiguer/hermes-client',
     license='CeCILL',
     author='Mark Anthony Conway-Greenslade',
     author_email='momipsl@ipsl.jussieu.fr',
