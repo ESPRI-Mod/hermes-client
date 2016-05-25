@@ -1,12 +1,12 @@
 ============================
-Prodiguer Client Usage Guide
+HERMES Client Usage Guide
 ============================
 
-Upon successful `installation <https://github.com/Prodiguer/prodiguer-client/blob/master/docs/installation.rst>`_ of the `prodiguer client <https://github.com/Prodiguer/prodiguer-client>`_ library, supported commands can easily be called from command line.  Listed below are the full set of supported commands alongside command argument descriptions.
+Upon successful `installation <https://github.com/Prodiguer/hermes-client/blob/master/docs/installation.rst>`_ of the `hermes client <https://github.com/Prodiguer/hermes-client>`_ library, supported commands can easily be called from command line.  Listed below are the full set of supported commands alongside command argument descriptions.
 
 **Note** - For each command listed below type -h or --help to access the command's help text.
 
-prodiguer-client-metrics-add
+hermes-client-metrics-add
 ----------------------------
 
 Uploads simulation metrics to remote repository.
@@ -23,7 +23,7 @@ Uploads simulation metrics to remote repository.
 
 	**force** = existing metrics are overwritten.
 
-prodiguer-client-metrics-add-batch
+hermes-client-metrics-add-batch
 ----------------------------
 
 Uploads a batch of simulation metrics to remote repository.
@@ -40,7 +40,7 @@ Uploads a batch of simulation metrics to remote repository.
 
 	**force** = existing metrics are overwritten.
 
-prodiguer-client-metrics-delete
+hermes-client-metrics-delete
 ----------------------------
 
 Deletes simulation metrics from remote repository.
@@ -53,7 +53,7 @@ Deletes simulation metrics from remote repository.
 
 	Path to a metrics filter to be applied.
 
-prodiguer-client-metrics-fetch
+hermes-client-metrics-fetch
 ----------------------------
 
 Fetches a set of simulation metrics from remote repository.
@@ -66,7 +66,7 @@ Fetches a set of simulation metrics from remote repository.
 
 	Path to a metrics filter to be applied.
 
-prodiguer-client-metrics-fetch-columns
+hermes-client-metrics-fetch-columns
 ----------------------------
 
 Fetches columns associated with a set of simulation metrics from remote repository.
@@ -75,7 +75,7 @@ Fetches columns associated with a set of simulation metrics from remote reposito
 
 	A metrics group identifier.
 
-prodiguer-client-metrics-fetch-count
+hermes-client-metrics-fetch-count
 ----------------------------
 
 Fetches count associated with a set of simulation metrics from remote repository.
@@ -88,7 +88,7 @@ Fetches count associated with a set of simulation metrics from remote repository
 
 	Path to a metrics filter to be applied.
 
-prodiguer-client-metrics-fetch-file
+hermes-client-metrics-fetch-file
 ----------------------------
 
 Fetches a set of simulation metrics from remote repository and saves them to local file system.
@@ -105,7 +105,7 @@ Fetches a set of simulation metrics from remote repository and saves them to loc
 
 	Directory to which downloaded metrics files will be written.
 
-prodiguer-client-metrics-fetch-setup
+hermes-client-metrics-fetch-setup
 ----------------------------
 
 	Fetches setup data associated with a set of simulation metrics.
@@ -118,12 +118,12 @@ prodiguer-client-metrics-fetch-setup
 
 	Path to a metrics filter to be applied.
 
-prodiguer-client-metrics-fetch-list
+hermes-client-metrics-fetch-list
 ----------------------------
 
 Fetches list of all simulation metric group names.
 
-prodiguer-client-metrics-format
+hermes-client-metrics-format
 ----------------------------
 
 Formats simulation metrics in readiness for upload.
@@ -140,7 +140,7 @@ Formats simulation metrics in readiness for upload.
 
 	Directory to which reformatted metrics files will be written.
 
-prodiguer-client-metrics-rename
+hermes-client-metrics-rename
 ----------------------------
 
 Renames a set of simulation metrics.
@@ -153,7 +153,7 @@ Renames a set of simulation metrics.
 
 	New metrics group identifier.
 
-prodiguer-client-metrics-set-hashes
+hermes-client-metrics-set-hashes
 ----------------------------
 
 Reassigns hash identifiers for a set of simulation metrics.
