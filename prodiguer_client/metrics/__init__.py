@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-.. module:: prodiguer_client.metrics.__init__.py
+.. module:: hermes_client.metrics.__init__.py
 
    :copyright: @2015 IPSL (http://ipsl.fr)
    :license: GPL / CeCILL

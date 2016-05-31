@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-.. module:: prodiguer_client/metrics/api_proxy.py
+.. module:: hermes_client/metrics/api_proxy.py
    :copyright: @2015 IPSL (http://ipsl.fr)
    :license: GPL/CeCIL
    :platform: Unix, Windows
@@ -95,7 +95,7 @@ def add(metrics_filepath, duplicate_action=_ADD_DUPLICATE_ACTION_SKIP):
     :param str metrics_filepath: Path to a file containing metrics to be uploaded.
     :param str duplicate_action: Action to take when encountering a metric set with a duplicate hash identifier.
 
-    :raises prodiguer_client.exceptions.WebServiceException: If the web-service reports an error.
+    :raises hermes_client.exceptions.WebServiceException: If the web-service reports an error.
 
     """
     # Parse params.
@@ -120,7 +120,7 @@ def add_batch(metrics_dirpath, duplicate_action=_ADD_DUPLICATE_ACTION_SKIP):
     :param str metrics_dirpath: Path to a directory containing metric files to be uploaded.
     :param str duplicate_action: Action to take when encountering a metric set with a duplicate hash identifier.
 
-    :raises prodiguer_client.exceptions.WebServiceException: If the web-service reports an error.
+    :raises hermes_client.exceptions.WebServiceException: If the web-service reports an error.
 
     """
     # Parse params.
@@ -138,7 +138,7 @@ def delete(group_id, group_filter_filepath=None):
     :param str group_id: A metrics group identifier.
     :param str group_filter_filepath: Path to a metrics group filter json file.
 
-    :raises prodiguer_client.exceptions.WebServiceException: If the web-service reports an error.
+    :raises hermes_client.exceptions.WebServiceException: If the web-service reports an error.
 
     """
     # Parse params.
@@ -190,7 +190,7 @@ def fetch_file(group_id, group_filter_filepath=None):
     :returns: Path to a temporary file containing the downloaded metrics.
     :rtype: str
 
-    :raises prodiguer_client.exceptions.WebServiceException: If the web-service reports an error.
+    :raises hermes_client.exceptions.WebServiceException: If the web-service reports an error.
 
     """
     data = fetch(group_id, group_filter_filepath)
@@ -208,7 +208,7 @@ def fetch_columns(group_id):
     :returns: Set of column names associated with a group of metrics.
     :rtype: set
 
-    :raises prodiguer_client.exceptions.WebServiceException: If the web-service reports an error.
+    :raises hermes_client.exceptions.WebServiceException: If the web-service reports an error.
 
     """
     # Parse params.
@@ -230,7 +230,7 @@ def fetch_count(group_id, group_filter_filepath=None):
     :returns: Count of number of metrics within a group.
     :rtype: int
 
-    :raises prodiguer_client.exceptions.WebServiceException: If the web-service reports an error.
+    :raises hermes_client.exceptions.WebServiceException: If the web-service reports an error.
 
     """
     # Parse params.
@@ -250,7 +250,7 @@ def fetch_list():
     :returns: Set of metric groups within remote repository.
     :rtype: set
 
-    :raises prodiguer_client.exceptions.WebServiceException: If the web-service reports an error.
+    :raises hermes_client.exceptions.WebServiceException: If the web-service reports an error.
 
     """
     # Invoke API.
@@ -271,7 +271,7 @@ def fetch_setup(group_id, group_filter_filepath=None):
     :returns: Setup data associated with a group of metrics.
     :rtype: collections.OrderedDict
 
-    :raises prodiguer_client.exceptions.WebServiceException: If the web-service reports an error.
+    :raises hermes_client.exceptions.WebServiceException: If the web-service reports an error.
 
     """
     # Parse params.
@@ -295,7 +295,7 @@ def rename(group_id, new_group_id):
     :param str group_id: ID of a metric group.
     :param str new_group_id: New ID of the metric group.
 
-    :raises prodiguer_client.exceptions.WebServiceException: If the web-service reports an error.
+    :raises hermes_client.exceptions.WebServiceException: If the web-service reports an error.
 
     """
     # Parse params.

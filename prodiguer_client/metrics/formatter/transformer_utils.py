@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-.. module:: prodiguer_client/metrics/formatter/transformer_utils.py
+.. module:: hermes_client/metrics/formatter/transformer_utils.py
    :copyright: @2015 IPSL (http://ipsl.fr)
    :license: GPL/CeCIL
    :platform: Unix, Windows

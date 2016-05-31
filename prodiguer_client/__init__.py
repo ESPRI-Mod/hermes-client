@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-.. module:: prodiguer_client.__init__.py
+.. module:: hermes_client.__init__.py
 
    :copyright: @2015 IPSL (http://ipsl.fr)
    :license: GPL / CeCILL
@@ -12,7 +12,7 @@
 
 """
 
-__title__ = 'prodiguer_client'
+__title__ = 'hermes_client'
 __version__ = '0.4.0.0'
 __author__ = 'Mark Anthony Conway-Greenslade'
 __license__ = 'GPL / CeCILL'

@@ -50,13 +50,13 @@ def _get_version():
     """Returns library version by inspecting __init__.py file.
 
     """
-    with open('prodiguer_client/__init__.py', 'r') as fd:
+    with open('hermes_client/__init__.py', 'r') as fd:
         return re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]',
                          fd.read(), re.MULTILINE).group(1)
 
 
 setup(
-    name='prodiguer_client',
+    name='hermes_client',
     version=_get_version(),
     description='hermes-client is a python client library for interacting with HERMES web services.',
     long_description=(_read('README.rst')),
@@ -66,7 +66,6 @@ setup(
     author='Mark Anthony Conway-Greenslade',
     author_email='momipsl@ipsl.jussieu.fr',
     packages=find_packages(),
-    # package_dir={'prodiguer_client': 'prodiguer_client'},
     include_package_data=True,
     distclass=_BinaryDistribution,
     classifiers=[

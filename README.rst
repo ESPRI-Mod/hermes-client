@@ -1,16 +1,16 @@
-prodiguer-client
+hermes-client
 ================
 
 Synopsis
 --------------------------------------
 
-prodiguer-client is a python library that simplifies interacting with prodiguer web services.  It primarily supports the management of pcmdi simulation metrics but will over time be extended to support other scenarios.
+hermes-client is a python library that simplifies interacting with HERMES web services.  It primarily supports the management of pcmdi simulation metrics but will over time be extended to support other scenarios.
 
 Documentation
 --------------------------------------
 
-- `Installation <https://github.com/Prodiguer/prodiguer-client/blob/master/docs/installation.rst>`_
-- `Usage <https://github.com/Prodiguer/prodiguer-client/blob/master/docs/usage.rst>`_
+- `Installation <https://github.com/Prodiguer/hermes-client/blob/master/docs/installation.rst>`_
+- `Usage <https://github.com/Prodiguer/hermes-client/blob/master/docs/usage.rst>`_
 
 Supported Platforms
 --------------------------------------

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-.. module:: prodiguer_client/metrics/formatter/decoder_pcmdi.py
+.. module:: hermes_client/metrics/formatter/decoder_pcmdi.py
    :copyright: @2015 IPSL (http://ipsl.fr)
    :license: GPL/CeCIL
    :platform: Unix, Windows

@@ -5,7 +5,7 @@
    :copyright: @2015 IPSL (http://ipsl.fr)
    :license: GPL/CeCIL
    :platform: Unix, Windows
-   :synopsis: Libary prodiguer web-service API utility functions.
+   :synopsis: HERMES web-service API utility functions.
 
 .. moduleauthor:: Insitut Pierre Simon Laplace (IPSL)
 
