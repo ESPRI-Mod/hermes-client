@@ -57,7 +57,7 @@ class _ProcessingContextInfo(object):
         self.output_count = 0
         self.output_format = output_format
         self.set_input_file(None)
-        self.timestamp = unicode(arrow.now())
+        self.timestamp = unicode(arrow.utcnow())
 
 
     def set_input_file(self, input_file):
