@@ -89,17 +89,17 @@ def _parse_duplicate_action(action):
     return action
 
 
-def add(metrics_filepath, duplicate_action=_ADD_DUPLICATE_ACTION_SKIP):
+def add(fpath, duplicate_action=_ADD_DUPLICATE_ACTION_SKIP):
     """Adds metrics to remote repository.
 
-    :param str metrics_filepath: Path to a file containing metrics to be uploaded.
+    :param str fpath: Path to a file containing metrics to be uploaded.
     :param str duplicate_action: Action to take when encountering a metric set with a duplicate hash identifier.
 
     :raises hermes_client.exceptions.WebServiceException: If the web-service reports an error.
 
     """
     # Parse params.
-    metrics = io.parse_json_filepath(metrics_filepath, force=True)
+    metrics = io.parse_json_filepath(fpath, force=True)
     duplicate_action = _parse_duplicate_action(duplicate_action)
 
     # Invoke api.
@@ -107,29 +107,29 @@ def add(metrics_filepath, duplicate_action=_ADD_DUPLICATE_ACTION_SKIP):
     response = api.invoke(endpoint, verb=requests.post, payload=metrics)
 
     # Inform user.
-    msg = "processed file: {}".format(metrics_filepath)
+    msg = "processed file: {}".format(fpath)
     msg += " (added row count={0}, duplicate row count={1})".format(
         response['addedCount'], response['duplicateCount'])
     msg += "."
     _log("add", msg)
 
 
-def add_batch(metrics_dirpath, duplicate_action=_ADD_DUPLICATE_ACTION_SKIP):
+def add_batch(dpath, duplicate_action=_ADD_DUPLICATE_ACTION_SKIP):
     """Adds a batch metrics to remote repository.
 
-    :param str metrics_dirpath: Path to a directory containing metric files to be uploaded.
+    :param str dpath: Path to a directory containing metric files to be uploaded.
     :param str duplicate_action: Action to take when encountering a metric set with a duplicate hash identifier.
 
     :raises hermes_client.exceptions.WebServiceException: If the web-service reports an error.
 
     """
     # Parse params.
-    metrics_dirpath = io.parse_dirpath(metrics_dirpath)
+    dpath = io.parse_dirpath(dpath)
     duplicate_action = _parse_duplicate_action(duplicate_action)
 
     # Process files.
-    for metrics_filepath in os.listdir(metrics_dirpath):
-        add(os.path.join(metrics_dirpath, metrics_filepath), duplicate_action)
+    for fname in os.listdir(dpath):
+        add(os.path.join(dpath, fname), duplicate_action)
 
 
 def delete(group_id, group_filter_filepath=None):
