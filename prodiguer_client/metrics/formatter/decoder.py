@@ -14,21 +14,14 @@
 import json
 
 from prodiguer_client.metrics.formatter import decoder_pcmdi
+from prodiguer_client.metrics.formatter import constants
 
 
 
 # Map of supported decoders keyed by file format.
 _DECODERS = {
-    'pcmdi': decoder_pcmdi.decode
+    constants.INPUT_FORMAT_PCMDI: decoder_pcmdi.decode
 }
-
-
-def _get_data(input_file):
-    """Returns raw metrics data from an input file.
-
-    """
-    with open(input_file, 'r') as input_file:
-        return json.loads(input_file.read())
 
 
 def decode(input_file, input_format):
@@ -42,5 +35,7 @@ def decode(input_file, input_format):
 
     """
     decoder = _DECODERS[input_format]
+    with open(input_file, 'r') as fstream:
+        input_data = json.loads(fstream.read())
 
-    return decoder(input_file, _get_data(input_file))
+    return decoder(input_file, input_data)

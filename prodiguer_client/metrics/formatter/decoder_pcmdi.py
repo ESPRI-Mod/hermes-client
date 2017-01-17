@@ -42,12 +42,7 @@ def _get_reference_types(data):
     """Returns set of reference types defined within an input file.
 
     """
-    result = set(data['References'].keys())
-    if 'default' in result:
-        result.add('defaultReference')
-        result.remove('default')
-
-    return result
+    return [(i, u"{}Reference".format(i))  for i in set(data['References'].keys())]
 
 
 def _get_simulations(data):
@@ -70,9 +65,9 @@ def _get_maskings(data):
     """
     result = set()
     for model in _get_models(data):
-        for reference_type in _get_reference_types(data):
+        for reference_type, reference_type_key in _get_reference_types(data):
             for simulation in _get_simulations(data):
-                result.update(data[model][reference_type][simulation].keys())
+                result.update(data[model][reference_type_key][simulation].keys())
 
     return result
 
@@ -82,7 +77,7 @@ def _get_groups(data, variable):
 
     """
     result = []
-    for reference_type in _get_reference_types(data):
+    for reference_type, reference_type_key in _get_reference_types(data):
         for model in _get_models(data):
             for simulation in _get_simulations(data):
                 for masking in _get_maskings(data):
@@ -93,7 +88,7 @@ def _get_groups(data, variable):
                             simulation,
                             masking,
                             variable,
-                            data[model][reference_type][simulation][masking]
+                            data[model][reference_type_key][simulation][masking]
                             ))
                     except KeyError:
                         pass
@@ -111,4 +106,6 @@ def decode(fpath, data):
     :rtype: list
 
     """
-    return (data, _get_groups(data, _get_variable(fpath)))
+    variable = _get_variable(fpath)
+
+    return (data, _get_groups(data, variable))
