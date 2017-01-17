@@ -15,13 +15,6 @@ import os
 
 
 
-def _get_variable(fpath):
-    """Returns variable name extracted from a metrics filename.
-
-    """
-    return os.path.basename(fpath).split("_")[0]
-
-
 def _get_models(data):
     """Returns set of models defined within an input file.
 
@@ -72,12 +65,13 @@ def _get_maskings(data):
     return result
 
 
-def _get_groups(data, variable):
+def _get_groups(data):
     """Returns set of metric groups defined within an input file.
 
     """
     result = []
     for reference_type, reference_type_key in _get_reference_types(data):
+        variable = data['References'][reference_type]['filename'].split("_")[0]
         for model in _get_models(data):
             for simulation in _get_simulations(data):
                 for masking in _get_maskings(data):
@@ -96,16 +90,13 @@ def _get_groups(data, variable):
     return result
 
 
-def decode(fpath, data):
+def decode(data):
     """Decodes set of metrics files.
 
-    :param str fpath: Path to file from which metrics data was loaded.
-    :param list data: Raw metrics data in pcmdi format.
+    :param list data: Raw metrics data.
 
     :returns: Input data to be transformed.
     :rtype: list
 
     """
-    variable = _get_variable(fpath)
-
-    return (data, _get_groups(data, variable))
+    return (data, _get_groups(data))

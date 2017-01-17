@@ -38,4 +38,4 @@ def decode(input_file, input_format):
     with open(input_file, 'r') as fstream:
         input_data = json.loads(fstream.read())
 
-    return decoder(input_file, input_data)
+    return decoder(input_data)

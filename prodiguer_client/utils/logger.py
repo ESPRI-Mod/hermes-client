@@ -41,11 +41,11 @@ def _get_formatted_message(msg, module, level, app, institute):
     if msg is None:
         return _NULL_MSG
     else:
-        return "{0} :: {1} {2} {3} {4} > {5}".format(
+        return "{} [{}] :: {} {} > {} : {}".format(
             unicode(arrow.get())[0:-13],
+            level,
             institute,
             app,
-            level,
             module,
             unicode(msg).strip()
             )

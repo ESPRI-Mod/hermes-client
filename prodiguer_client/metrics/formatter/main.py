@@ -21,6 +21,7 @@ from prodiguer_client.metrics.formatter import encoder
 from prodiguer_client.metrics.formatter import decoder
 from prodiguer_client.metrics.formatter import hashifier
 from prodiguer_client.metrics.formatter import transformer
+from prodiguer_client.utils import logger
 
 
 
@@ -80,20 +81,6 @@ class _ProcessingContextInfo(object):
         return "metrics-{0}-{1}".format(self.output_format, self.output_count)
 
 
-def _log(msg=None):
-    """Outputs a message to log.
-
-    """
-    # Format.
-    if msg is not None:
-        msg = "IPSL HERMES INFO METRICS > {}".format(str(msg).strip())
-    else:
-        msg = "-------------------------------------------------------------------------------"
-
-    # TODO output to logs.
-    print msg
-
-
 def _init_output_dirs(ctx):
     """Initializes output directories.
 
@@ -112,7 +99,7 @@ def _set_input_data(ctx):
     """Sets raw input data to be transformed into metrics.
 
     """
-    _log("formatting input file: {}".format(ctx.input_file))
+    logger.log("formatting input file: {}".format(ctx.input_file), module="METRICS")
 
     ctx.input_data = decoder.decode(ctx.input_file, ctx.input_format)
 
@@ -250,4 +237,4 @@ def execute(
             ):
             func(ctx)
 
-    _log("formatted {} files".format(len(ctx.input_files)))
+    logger.log("formatted {} files".format(len(ctx.input_files)), module="METRICS")

@@ -68,7 +68,7 @@ def _log(action, msg=None):
         msg = action
     else:
         msg = "{0} :: {1}".format(action.upper(), msg)
-    logger.log(msg, module="METRIC")
+    logger.log(msg, module="METRICS")
 
 
 def _get_metric_block(columns, values):
