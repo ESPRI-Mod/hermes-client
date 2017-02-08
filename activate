@@ -1,5 +1,8 @@
 # Set home.
-declare HERMES_CLIENT_HOME=$( dirname "${BASH_SOURCE[0]}" )
+export HERMES_CLIENT_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Extend python path.
+export PYTHONPATH=$PYTHONPATH:$HERMES_CLIENT_HOME
 
 # Set path to ./jobs.
 declare HERMES_CLIENT_DIR_JOBS=$HERMES_CLIENT_HOME/jobs
