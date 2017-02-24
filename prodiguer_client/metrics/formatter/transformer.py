@@ -11,13 +11,16 @@
 
 
 """
-from prodiguer_client.metrics.formatter import transformer_pcmdi
+from prodiguer_client.metrics.formatter import constants
+from prodiguer_client.metrics.formatter import transformer_pcmdi_1
+from prodiguer_client.metrics.formatter import transformer_pcmdi_2
 
 
 
-# Map of supported transformers keyed by file format.
+# Map of transformers to input formats.
 _TRANSFORMERS = {
-    'pcmdi': transformer_pcmdi.transform
+    constants.INPUT_FORMAT_1: transformer_pcmdi_1,
+    constants.INPUT_FORMAT_2: transformer_pcmdi_2
 }
 
 
@@ -25,13 +28,12 @@ def transform(input_data, input_format):
     """Transforms input data to standardized format.
 
     :param list input_data: Metrics json file data.
-    :param str input_format: Format of metrics files.
 
     :returns: Input data transformed to standardized format.
     :rtype: list
 
     """
-    transformer = _TRANSFORMERS[input_format]
     data, groups = input_data
+    transformer = _TRANSFORMERS[input_format]
 
-    return [transformer(data, group) for group in groups]
+    return [transformer.transform(data, group) for group in groups]

@@ -13,18 +13,20 @@
 """
 import json
 
-from prodiguer_client.metrics.formatter import decoder_pcmdi
 from prodiguer_client.metrics.formatter import constants
+from prodiguer_client.metrics.formatter import decoder_pcmdi_1
+from prodiguer_client.metrics.formatter import decoder_pcmdi_2
 
 
 
-# Map of supported decoders keyed by file format.
+# Map of decoaders to input formats.
 _DECODERS = {
-    constants.INPUT_FORMAT_PCMDI: decoder_pcmdi.decode
+    constants.INPUT_FORMAT_1: decoder_pcmdi_1,
+    constants.INPUT_FORMAT_2: decoder_pcmdi_2
 }
 
 
-def decode(input_file, input_format):
+def decode(input_file):
     """Decodes set of metrics files.
 
     :param str input_file: An input file to be decoded.
@@ -34,8 +36,11 @@ def decode(input_file, input_format):
     :rtype: list
 
     """
-    decoder = _DECODERS[input_format]
+    # Load JSON data.
     with open(input_file, 'r') as fstream:
         input_data = json.loads(fstream.read())
 
-    return decoder(input_data)
+    # Determine input format.
+    input_format = constants.INPUT_FORMAT_2 if "json_version" in input_data else constants.INPUT_FORMAT_1
+
+    return _DECODERS[input_format].decode(input_data), input_format

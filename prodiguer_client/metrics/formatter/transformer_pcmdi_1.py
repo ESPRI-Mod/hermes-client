@@ -40,7 +40,7 @@ def _get_simulation(data, simulation, model):
     })
 
 
-def _get_masking(data, masking):
+def _get_masking(data, masking, region):
     """Returns regional masking information for output.
 
     """
@@ -82,21 +82,16 @@ def _get_regridding(data):
     })
 
 
-def _get_metric(metric, variable):
-    """Returns metric information for output.
+def _get_metric(metric):
+    """Returns formatted metric information for output.
 
     """
     name, value = metric
-    result = tu.get_numeric(value)
 
-    return tu.get_dict({
-        'dataType': name.split('_')[-2],
-        'fullName': name,
-        'name': '_'.join((name.split('_')[:2])),
-        'region': name.split('_')[-1],
-        'result': result,
-        'variable': variable
-    })
+    return {
+        'name': name,
+        'value': tu.get_numeric(value)
+    }
 
 
 def transform(data, group):
@@ -110,13 +105,13 @@ def transform(data, group):
 
     """
     # Unpack tuple.
-    reference_type, model, simulation, masking, variable, metrics = group
+    reference_type, model, simulation, masking, region, variable, metrics = group
 
     # Return a dictionary that will be flattened during encoding.
     return tu.get_dict({
-        'masking': _get_masking(data, masking),
+        'masking': _get_masking(data, masking, region),
         'metricCreationDate': data[model]['SimulationDescription'].get('metricCreationDate', None),
-        'metrics': [_get_metric(m, variable) for m in metrics.iteritems()],
+        'metrics': [_get_metric(m) for m in metrics.iteritems()],
         'reference': _get_reference(data, reference_type),
         'regridding': _get_regridding(data),
         'simulation': _get_simulation(data, simulation, model),

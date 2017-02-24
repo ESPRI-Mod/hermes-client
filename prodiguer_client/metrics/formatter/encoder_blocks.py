@@ -62,7 +62,7 @@ def _encode(block, timestamp):
         result += _encode_section(section, section_name)
 
     # Set metrics.
-    result += [(m['fullName'], m['result']) for m in block['metrics']]
+    result += [(m['name'], m['value']) for m in block['metrics']]
 
     # Set variable.
     result.append(('variable', block['variable']))

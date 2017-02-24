@@ -11,15 +11,15 @@
 
 
 """
-
 # Supported input formats.
-INPUT_FORMAT_PCMDI = 'pcmdi'
+INPUT_FORMAT_1 = "1"
+INPUT_FORMAT_2 = "2"
 
 # Set of supported input formats.
 INPUT_FORMAT_SET = set([
-	INPUT_FORMAT_PCMDI,
+	INPUT_FORMAT_1,
+	INPUT_FORMAT_2
 	])
-
 
 # Supported output formats.
 OUTPUT_FORMAT_BLOCKS = 'blocks'

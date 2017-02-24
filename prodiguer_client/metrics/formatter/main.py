@@ -43,7 +43,6 @@ class _ProcessingContextInfo(object):
     def __init__(self,
         group_id,
         input_dir,
-        input_format,
         output_dir,
         output_format
         ):
@@ -53,7 +52,6 @@ class _ProcessingContextInfo(object):
         self.group_id = unicode(group_id).lower()
         self.input_dir = input_dir
         self.input_files = []
-        self.input_format = input_format
         self.output_dir = output_dir
         self.output_count = 0
         self.output_format = output_format
@@ -67,6 +65,7 @@ class _ProcessingContextInfo(object):
         """
         self.input_data = None
         self.input_file = input_file
+        self.input_format = None
         self.input_blocks = []
         self.output_chunks = []
         self.output_columns = []
@@ -101,7 +100,7 @@ def _set_input_data(ctx):
     """
     logger.log("formatting input file: {}".format(ctx.input_file), module="METRICS")
 
-    ctx.input_data = decoder.decode(ctx.input_file, ctx.input_format)
+    ctx.input_data, ctx.input_format = decoder.decode(ctx.input_file)
 
 
 def _set_input_blocks(ctx):
@@ -166,7 +165,7 @@ def _write_output_chunks(ctx):
         }, ctx.output_dir, ctx.output_format, ctx.output_fname)
 
 
-def _validate(group_id, input_dir, input_format, output_dir, output_format):
+def _validate(group_id, input_dir, output_dir, output_format):
     """Validate input parameters passed from command line.
 
     """
@@ -178,11 +177,6 @@ def _validate(group_id, input_dir, input_format, output_dir, output_format):
 
     if not os.path.isdir(input_dir):
         raise ValueError("Invalid input directory.")
-
-    if input_format not in constants.INPUT_FORMAT_SET:
-        err = "Invalid input format. Supported formats = {}"
-        err = err.format(" | ".join(constants.INPUT_FORMAT_SET))
-        raise ValueError(err)
 
     if not os.path.isdir(output_dir):
         raise ValueError("Invalid output directory {}.")
@@ -197,25 +191,22 @@ def execute(
     group_id,
     input_dir,
     output_dir,
-    input_format=constants.INPUT_FORMAT_PCMDI,
     output_format=constants.OUTPUT_FORMAT_BLOCKS
     ):
     """Reformats metrics.
 
     :param str group_id: ID of metrics group to be written.
     :param str input_dir: Path to a directory containing unformateed metrics files.
-    :param str input_format: Format of input files.
     :param str output_dir: Path to a directory to which reformatted metrics will be written.
     :param str output_format: Format of output files.
 
     """
     # Validate inputs.
-    _validate(group_id, input_dir, input_format, output_dir, output_format)
+    _validate(group_id, input_dir, output_dir, output_format)
 
     # Instantiate processing context wrapper.
     ctx = _ProcessingContextInfo(group_id,
                                  input_dir,
-                                 input_format,
                                  output_dir,
                                  output_format)
 
@@ -236,5 +227,4 @@ def execute(
             _write_output_chunks
             ):
             func(ctx)
-
     logger.log("formatted {} files".format(len(ctx.input_files)), module="METRICS")
