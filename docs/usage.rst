@@ -105,6 +105,11 @@ Fetches a set of simulation metrics from remote repository and saves them to loc
 
 	Directory to which downloaded metrics files will be written.
 
+hermes-client-metrics-fetch-list
+----------------------------
+
+Fetches list of all simulation metric group names.
+
 hermes-client-metrics-fetch-setup
 ----------------------------
 
@@ -117,11 +122,6 @@ hermes-client-metrics-fetch-setup
 **-f, --filter**
 
 	Path to a metrics filter to be applied.
-
-hermes-client-metrics-fetch-list
-----------------------------
-
-Fetches list of all simulation metric group names.
 
 hermes-client-metrics-format
 ----------------------------
