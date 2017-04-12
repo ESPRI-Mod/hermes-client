@@ -32,7 +32,7 @@ Edit either $HOME/.bash_profile or $HOME/.bash_rc to setup your shell environmen
 	# --------------------------------------------------------------------
 
 	# HERMES: web-service URL.
-	export HERMES_CLIENT_WEB_URL='https://hermes-test-web.ipsl.fr'
+	export HERMES_CLIENT_WEB_URL='https://hermes-web.ipsl.fr'
 
 	# HERMES: activate shell
 	source $HERMES_CLIENT_HOME/activate
