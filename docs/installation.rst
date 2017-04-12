@@ -9,7 +9,7 @@ Installing the HERMES client library is simple & straightforward.
 Step 1: Install python dependencies
 ----------------------------
 
-The HERMES client library requires the following python libraries all of which can be installed via pip::
+The HERMES client library requires the following python 2.7 libraries all of which can be installed via pip::
 
 	pip install arrow
 	pip install requests
@@ -31,17 +31,11 @@ Edit either $HOME/.bash_profile or $HOME/.bash_rc to setup your shell environmen
 	# HERMES client settings
 	# --------------------------------------------------------------------
 
-	# HERMES: client path
-	export HERMES_CLIENT_HOME=YOUR_WORKING_DIRECTORY/hermes-client
-
 	# HERMES: web-service URL.
 	export HERMES_CLIENT_WEB_URL='https://hermes-test-web.ipsl.fr'
 
-	# HERMES: client aliases
-	source $HERMES_CLIENT_HOME/aliases.sh
-
-	# HERMES: client python path
-	export PYTHONPATH=$PYTHONPATH:$HERMES_CLIENT_HOME
+	# HERMES: activate shell
+	source $HERMES_CLIENT_HOME/activate
 
 Step 4.	Command line usage
 ----------------------------
