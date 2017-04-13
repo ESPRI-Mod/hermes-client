@@ -13,8 +13,8 @@
 """
 import logging
 
-from prodiguer_client.utils import api
-from prodiguer_client.utils import logger
+from hermes_client.utils import api
+from hermes_client.utils import logger
 
 
 
@@ -40,7 +40,7 @@ def _log(action, msg=None):
 def heartbeat():
     """Tests to see if remote API is up.
 
-    :raises prodiguer_client.exceptions.WebServiceException: If the web-service reports an error.
+    :raises hermes_client.exceptions.WebServiceException: If the web-service reports an error.
 
     """
     # Invoke API.

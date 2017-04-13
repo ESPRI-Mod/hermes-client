@@ -13,7 +13,7 @@
 """
 import argparse
 
-import prodiguer_client as hermes
+import hermes_client as hermes
 
 
 

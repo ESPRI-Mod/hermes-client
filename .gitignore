@@ -15,4 +15,4 @@ docs/_build
 env/
 dist
 venv
-prodiguer_client.egg-info/
+hermes_client.egg-info/

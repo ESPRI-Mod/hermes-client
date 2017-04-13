@@ -13,7 +13,7 @@
 """
 import argparse
 
-import prodiguer_client as prodiguer
+import hermes_client as hermes
 
 
 
@@ -32,9 +32,9 @@ def _main(args):
     """Main entry point.
 
     """
-    columns = prodiguer.metrics.fetch_columns(args.group)
+    columns = hermes.metrics.fetch_columns(args.group)
     for column in sorted(columns):
-        prodiguer.log("fetch-columns :: {}".format(column), module="METRICS")
+        hermes.log("fetch-columns :: {}".format(column), module="METRICS")
 
 
 # Main entry point.

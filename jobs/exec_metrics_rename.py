@@ -13,7 +13,7 @@
 """
 import argparse
 
-import prodiguer_client as prodiguer
+import hermes_client as hermes
 
 
 
@@ -37,7 +37,7 @@ def _main(args):
     """Main entry point.
 
     """
-    prodiguer.metrics.rename(args.group, args.new_name)
+    hermes.metrics.rename(args.group, args.new_name)
 
 
 # Main entry point.

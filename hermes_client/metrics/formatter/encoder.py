@@ -11,7 +11,7 @@
 
 
 """
-from prodiguer_client.metrics.formatter import encoder_blocks
+from hermes_client.metrics.formatter import encoder_blocks
 
 
 

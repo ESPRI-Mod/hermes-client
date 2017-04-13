@@ -15,8 +15,8 @@ import json
 
 import requests
 
-from prodiguer_client import exceptions
-from prodiguer_client import options
+from hermes_client import exceptions
+from hermes_client import options
 
 
 

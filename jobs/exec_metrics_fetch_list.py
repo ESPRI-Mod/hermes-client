@@ -13,7 +13,7 @@
 """
 import argparse
 
-import prodiguer_client as prodiguer
+import hermes_client as hermes
 
 
 
@@ -25,9 +25,9 @@ def _main():
     """Main entry point.
 
     """
-    groups = prodiguer.metrics.fetch_list()
+    groups = hermes.metrics.fetch_list()
     for group in groups:
-        prodiguer.log("list :: {}".format(group), module="METRICS")
+        hermes.log("list :: {}".format(group), module="METRICS")
 
 
 # Main entry point.

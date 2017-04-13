@@ -19,11 +19,11 @@ __license__ = 'GPL / CeCILL'
 __copyright__ = 'Copyright 2015 IPSL'
 
 
-from prodiguer_client import metrics
-from prodiguer_client import ops
-from prodiguer_client.exceptions import InvalidOptionError
-from prodiguer_client.exceptions import WebServiceException
-from prodiguer_client.utils.logger import log
-from prodiguer_client.options import list_options
-from prodiguer_client.options import OPT_WEB_API_URL
-from prodiguer_client.options import set_option
+from hermes_client import metrics
+from hermes_client import ops
+from hermes_client.exceptions import InvalidOptionError
+from hermes_client.exceptions import WebServiceException
+from hermes_client.utils.logger import log
+from hermes_client.options import list_options
+from hermes_client.options import OPT_WEB_API_URL
+from hermes_client.options import set_option

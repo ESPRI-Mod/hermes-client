@@ -14,7 +14,7 @@
 import argparse
 
 
-import prodiguer_client as prodiguer
+import hermes_client as hermes
 
 
 
@@ -40,8 +40,8 @@ def _main(args):
     """Main entry point.
 
     """
-    count = prodiguer.metrics.fetch_count(args.group, args.filter)
-    prodiguer.log("fetch-count :: {}".format(count), module="METRICS")
+    count = hermes.metrics.fetch_count(args.group, args.filter)
+    hermes.log("fetch-count :: {}".format(count), module="METRICS")
 
 
 # Main entry point.

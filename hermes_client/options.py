@@ -13,7 +13,7 @@
 """
 import os
 
-from prodiguer_client import exceptions
+from hermes_client import exceptions
 
 
 

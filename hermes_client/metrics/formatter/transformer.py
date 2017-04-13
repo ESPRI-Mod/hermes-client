@@ -11,9 +11,9 @@
 
 
 """
-from prodiguer_client.metrics.formatter import constants
-from prodiguer_client.metrics.formatter import transformer_pcmdi_1
-from prodiguer_client.metrics.formatter import transformer_pcmdi_2
+from hermes_client.metrics.formatter import constants
+from hermes_client.metrics.formatter import transformer_pcmdi_1
+from hermes_client.metrics.formatter import transformer_pcmdi_2
 
 
 

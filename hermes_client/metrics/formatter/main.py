@@ -15,13 +15,13 @@ import re
 
 import arrow
 
-from prodiguer_client.metrics.formatter import constants
-from prodiguer_client.metrics.formatter import io
-from prodiguer_client.metrics.formatter import encoder
-from prodiguer_client.metrics.formatter import decoder
-from prodiguer_client.metrics.formatter import hashifier
-from prodiguer_client.metrics.formatter import transformer
-from prodiguer_client.utils import logger
+from hermes_client.metrics.formatter import constants
+from hermes_client.metrics.formatter import io
+from hermes_client.metrics.formatter import encoder
+from hermes_client.metrics.formatter import decoder
+from hermes_client.metrics.formatter import hashifier
+from hermes_client.metrics.formatter import transformer
+from hermes_client.utils import logger
 
 
 

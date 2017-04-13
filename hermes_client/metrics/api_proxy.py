@@ -19,9 +19,9 @@ import tempfile
 
 import requests
 
-from prodiguer_client.utils import api
-from prodiguer_client.utils import logger
-from prodiguer_client.utils import io
+from hermes_client.utils import api
+from hermes_client.utils import logger
+from hermes_client.utils import io
 
 
 
@@ -162,7 +162,7 @@ def fetch(group_id, group_filter_filepath=None):
     :returns: A group of metrics.
     :rtype: list
 
-    :raises prodiguer_client.exceptions.WebServiceException: If the web-service reports an error.
+    :raises hermes_client.exceptions.WebServiceException: If the web-service reports an error.
 
     """
     # Parse params.

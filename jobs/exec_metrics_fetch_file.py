@@ -15,7 +15,7 @@ import argparse
 import os
 import shutil
 
-import prodiguer_client as prodiguer
+import hermes_client as hermes
 
 
 
@@ -47,10 +47,10 @@ def _main(args):
     """Main entry point.
 
     """
-    input_file = prodiguer.metrics.fetch_file(args.group, args.filter)
+    input_file = hermes.metrics.fetch_file(args.group, args.filter)
     output_file = "{}.json".format(os.path.join(args.output_dir, args.group))
     shutil.move(input_file, output_file)
-    prodiguer.log("fetch-file :: {}".format(output_file, module="METRICS"))
+    hermes.log("fetch-file :: {}".format(output_file, module="METRICS"))
 
 
 

@@ -1,5 +1,5 @@
 recursive-include jobs *.py
-recursive-include prodiguer_client *.py
+recursive-include hermes_client *.py
 include aliases.sh
 include LICENSE
 include README.rst

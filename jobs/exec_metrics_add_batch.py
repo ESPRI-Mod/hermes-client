@@ -13,7 +13,7 @@
 """
 import argparse
 
-import prodiguer_client as prodiguer
+import hermes_client as hermes
 
 
 
@@ -38,7 +38,7 @@ def _main(args):
     """Main entry point.
 
     """
-    prodiguer.metrics.add_batch(args.directory, args.duplicate_action)
+    hermes.metrics.add_batch(args.directory, args.duplicate_action)
 
 
 # Main entry point.

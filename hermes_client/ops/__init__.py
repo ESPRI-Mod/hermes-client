@@ -11,4 +11,4 @@
 .. moduleauthor:: Insitut Pierre Simon Laplace (IPSL)
 
 """
-from prodiguer_client.ops.api_proxy import heartbeat
+from hermes_client.ops.api_proxy import heartbeat

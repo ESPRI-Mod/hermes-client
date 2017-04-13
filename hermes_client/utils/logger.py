@@ -13,7 +13,7 @@
 """
 import arrow
 
-from prodiguer_client import options
+from hermes_client import options
 
 
 
